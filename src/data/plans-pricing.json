@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Content Creation",
+    "price": "15,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Reel",
+      "Poster",
+      "Photoshoot",
+      "Edited Videos"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Social Media Mgmt",
+    "price": "15,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Posting",
+      "Strategy",
+      "Engagement Management"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Ads & Performance",
+    "price": "8,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Social Media Ad Setup",
+      "Target Audience Research",
+      "Ad Creatives + A/B Testing",
+      "Analytics + Optimization"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Branding & Design",
+    "price": "5,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Logo Design",
+      "Brand Style Guides",
+      "Menus, Flyers, Posters",
+      "Packaging And Digital Assets"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Event Marketing",
+    "price": "25,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Campaign Planning",
+      "Brand Collaborations",
+      "Event Sponsorship",
+      "Managing Influencer",
+      "Campaign Content"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Public Relations (PR)",
+    "price": "10,000",
+    "currency": "₹",
+    "period": "month",
+    "features": [
+      "Press Release Drafting",
+      "Local & Online Media Coverage",
+      "Brand Collaboration",
+      "Reputation Management",
+      "Influencer Outreach"
+    ],
+    "buttonText": "VIEW PLANS"
+  },
+  {
+    "title": "Web & App Development",
+    "price": "Based on requirements",
+    "currency": "",
+    "period": "",
+    "features": [
+      "UI/UX Designing",
+      "Landing Pages",
+      "Full Websites",
+      "E-Commerce Or Portfolio Sites",
+      "App Development",
+      "Google Maps + SEO Setup"
+    ],
+    "buttonText": "VIEW PLANS"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "/001",
+    "title": "Branding & Digital Design",
+    "description": "Strategic Visual Identities Crafted For Digital-First Audiences",
+    "image": "/01.png"
+  },
+  {
+    "id": "/002",
+    "title": "Web & App Development",
+    "description": "Seamless Digital Experiences Engineered For Performance",
+    "image": "/02.png"
+  },
+  {
+    "id": "/003",
+    "title": "Performance Marketing",
+    "description": "Data-Optimized Campaigns That Scale Your Growth",
+    "image": "/03.png"
+  },
+    
+    {
+        "id": "/004",
+        "title": "Content Strategy & Creation",
+        "description": "Compelling Narratives That Drive Engagement",
+        "image": "/04.png"
+    },
+    {
+        "id": "/005",
+        "title": "Social Media Management",
+        "description": "Building Communities Through Authentic Connections",
+        "image": "/05.png"
+    },
+    {
+        "id": "/006",
+        "title": "SEO & Analytics",
+        "description": "Data-Driven Insights To Elevate Your Online Presence",
+        "image": "/06.png"
+    }
+]

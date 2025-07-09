@@ -1,0 +1,80 @@
+[
+  {
+    "id": "/001",
+    "title": "Branding & Digital Design",
+    "description": "From logos to full visual systems, we build identities designed to convert not just decorate.",
+    "points": [
+      "Logo design",
+      "Brand style guides",
+      "Menus, flyers, posters",
+      "Packaging and digital assets"
+    ],
+    "image": "/Services/branding.png"
+  },
+  {
+    "id": "/002",
+    "title": "Web & App Development",
+    "description": "Sites and apps engineered for speed, security, and scalability",
+    "points": [
+      "Landing pages (via Webflow/Wix)",
+      "Full websites (Wix, Webflow, WordPress)",
+      "E-commerce or portfolio sites",
+      "Basic app development based on budget.",
+      "Google Maps + SEO setup",
+      "UI/UX Designing"
+    ],
+    "image": "/Services/web.png"
+  },
+  {
+    "id": "/003",
+    "title": "Performance Marketing",
+    "description": "We only run campaigns that prove ROI",
+    "points": [
+      "Facebook/Instagram/Google Ad setup",
+      "Target audience research",
+      "Ad creatives + A/B testing",
+      "Weekly analytics + optimization"
+    ],
+    "image": "/Services/performance.png"
+  },
+  {
+    "id": "/004",
+    "title": "Content & Social Media",
+    "description": "Strategic content that builds authority and drives action",
+    "points": [
+      "Photoshoots (product, lifestyle, events)",
+      "Reels, long videos and Editing-Post production",
+      "E-commerce or portfolio sites",
+      "Content strategy planning",
+      "Caption writing, hashtag research",
+      "Daily posting and scheduling",
+      "Community engagement"
+    ],
+    "image": "/Services/content.png"
+  },
+  {
+    "id": "/005",
+    "title": "Event Marketing",
+    "description": "Experiential Campaigns That Generate Buzz And Credibility",
+    "points": [
+      "Planning monthly campaigns/events",
+      "Brand Collaborations",
+      "Event sponsorship",
+      "Managing influencer tie-ups",
+      "Campaign content creation + coverage"
+    ],
+    "image": "/Services/event.png"
+  },
+  {
+    "id": "/006",
+    "title": "Public Relations",
+    "description": "PR that lands features, not just followers",
+    "points": [
+      "Press Release Drafting",
+      "Local & Online Media Coverage",
+      "Brand Collaborations & Influencer Outreach",
+      "Reputation Management"
+    ],
+    "image": "/Services/public.png"
+  }
+]

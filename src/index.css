@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #f76600;
+  --color-secondary: #ff6b35;
+  --color-dark: #1d1d1f;
+  --color-gray: #6e6e6e;
+  --color-light: #f6f6f6;
+  --color-soft-gray: #6E6E73;
+}
+
+@font-face {
+  font-family: 'DegularDisplay';
+  src: url('/fonts/Degular.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DegularText';
+  src: url('/fonts/DegularText-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSerifItalic';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: 'DegularDisplay', sans-serif;
+}
+
+
+.font-display {
+  font-family: 'DegularDisplay', sans-serif;
+}
+
+.font-text {
+  font-family: 'DegularText', sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

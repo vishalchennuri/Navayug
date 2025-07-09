@@ -1,0 +1,32 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Rahul M.",
+      "title": "Founder",
+      "avatar": "/placeholder.svg?height=60&width=60",
+      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+    },
+    {
+      "id": "2",
+      "name": "Priya S.",
+      "title": "CEO",
+      "avatar": "/placeholder.svg?height=60&width=60",
+      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+    },
+    {
+      "id": "3",
+      "name": "Amit K.",
+      "title": "Marketing Director",
+      "avatar": "/placeholder.svg?height=60&width=60",
+      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+    },
+    {
+      "id": "4",
+      "name": "Sarah L.",
+      "title": "Founder",
+      "avatar": "/placeholder.svg?height=60&width=60",
+      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+    }
+  ]
+}

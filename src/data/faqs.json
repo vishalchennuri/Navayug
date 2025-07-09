@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "question": "How quickly can you start working on our project ?",
+    "answer": "We can typically start within 3-5 business days after our onboarding call."
+  },
+  {
+    "id": "2",
+    "question": "Do you work with international clients ?",
+    "answer": "Yes, we work with clients globally. Our team is experienced with timezone coordination and async communication."
+  },
+  {
+    "id": "3",
+    "question": "Can we customize a package ?",
+    "answer": "Absolutely! Every business has unique needs. We offer custom-tailored packages to meet your goals and budget."
+  },
+  {
+    "id": "4",
+    "question": "How do you measure success ?",
+    "answer": "We use KPIs like ROI, engagement rate, conversion, and retention tailored to your business objectives."
+  },
+  {
+    "id": "5",
+    "question": "What if we don't see results ?",
+    "answer": "We work with you until you do. We'll revise our strategy and continue optimizing at no extra cost until targets are met."
+  }
+]

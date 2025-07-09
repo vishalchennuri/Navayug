@@ -1,0 +1,197 @@
+[
+  {
+    "id": "001",
+    "title": "Content Creation",
+    "descriptionPoints": [
+      "Photoshoots (product, lifestyle, events)",
+      "Reels and long videos",
+      "Editing and post-production",
+      "Graphic design (flyers, posters, menus)"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹15,000/mo",
+        "features": ["12 Post", "4 Reels"]
+      },
+      {
+        "name": "Growth",
+        "price": "₹25,000/mo",
+        "features": ["16 Post", "6 Reels", "Engagement"]
+      },
+      {
+        "name": "Scale",
+        "price": "₹50,000+/mo",
+        "features": ["20 Post", "8 Reels", "2 Shoots", "Ads"]
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "title": "Social Media Management",
+    "descriptionPoints": [
+      "Content strategy planning",
+      "Caption writing, hashtag research",
+      "Daily posting and scheduling",
+      "Community engagement",
+      "Monthly performance reports"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹15,000/mo",
+        "features": ["1 Part-Time SMM Executive", "Weekly Strategy Call"]
+      },
+      {
+        "name": "Growth",
+        "price": "₹25,000/mo",
+        "features": [
+          "1 Full-Time SMM Executive",
+          "4 Strategy Sessions",
+          "Analytics Report"
+        ]
+      },
+      {
+        "name": "Scale",
+        "price": "₹50,000+/mo",
+        "features": [
+          "2 Resources (SMM + Creative)",
+          "Full Strategy",
+          "Campaign Management"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "title": "Performance Marketing",
+    "descriptionPoints": [
+      "Facebook/Instagram/Google Ad setup",
+      "Target audience research",
+      "Ad creatives + A/B testing",
+      "Weekly analytics + optimization"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹8,000/mo",
+        "features": ["Meta Ad Setup", "Boosted Posts"]
+      },
+      {
+        "name": "Growth",
+        "price": "₹15,000/mo",
+        "features": ["Full Funnel Ads (Meta + Google)"]
+      },
+      {
+        "name": "Scale",
+        "price": "₹50,000+/mo",
+        "features": ["Advanced Targeting", "Retargeting Ads"]
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "title": "Branding & Digital Design",
+    "descriptionPoints": [
+      "Logo design",
+      "Brand style guides",
+      "Menus, flyers, posters",
+      "Packaging and digital assets"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹8,000/mo",
+        "features": ["Logo Design", "Menus", "Flyers", "Posters (One Time Design)"]
+      },
+      {
+        "name": "Advance",
+        "price": "₹15,000/mo",
+        "features": [
+          "Logo Design",
+          "Menus",
+          "Flyers",
+          "Posters (Frequent Customisation Flyers & Posters)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "title": "Event Marketing & Activations",
+    "descriptionPoints": [
+      "Planning monthly campaigns/events",
+      "Brand Collaborations",
+      "Event sponsorship",
+      "Managing influencer tie-ups",
+      "Campaign content creation + coverage"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹25,000/mo",
+        "features": [
+          "Event Planning",
+          "Event Execution",
+          "Content Delivery",
+          "Local Media Release"
+        ]
+      },
+      {
+        "name": "Advance",
+        "price": "₹50,000/mo",
+        "features": [
+          "Event Planning",
+          "Event Execution",
+          "Brand Collabs",
+          "Securing Sponsors",
+          "Content Delivery + Local Media Release"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "title": "Public Relations",
+    "descriptionPoints": [
+      "Press Release Drafting",
+      "Local & Online Media Coverage",
+      "Brand Collaborations & Influencer Outreach",
+      "Reputation Management"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "₹10,000/mo",
+        "features": [
+          "1 Professionally Edited Reels",
+          "2 Posts",
+          "Local Media Outreach"
+        ]
+      },
+      {
+        "name": "Growth",
+        "price": "₹20,000/mo",
+        "features": [
+          "2 Professionally Edited Reels",
+          "Brand Collabs",
+          "Blogger Mentions",
+          "Influencer PR",
+          "Local Media Outreach"
+        ]
+      },
+      {
+        "name": "Growth",
+        "price": "₹20,000/mo",
+        "features": [
+          "4 Professionally Edited Reels",
+          "Brand Collabs",
+          "Digital Coverage",
+          "Full PR Management",
+          "Local Media Outreach"
+        ]
+      }
+    ]
+  }
+  
+]

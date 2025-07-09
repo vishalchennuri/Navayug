@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Plant In",
+      "year": "2024",
+      "image": "/w1.png",
+      "tags": ["UX/UI", "App Development", "Design"],
+      "position": "up"
+    },
+    {
+      "id": 2,
+      "title": "Esco",
+      "year": "2025",
+      "image": "/w2.png",
+      "tags": ["Branding", "Logo Design", "Marketing"],
+      "position": "down"
+    },
+    {
+          "id": 3,
+      "title": "Hawke Ventures",
+      "year": "2024",
+      "image": "/w3.png",
+      "tags": ["Web Design", "Web Development", "UX/UI"],
+      "position": "up" 
+    },{
+          "id": 4,
+      "title": "Truway",
+      "year": "2025",
+      "image": "/w4.png",
+      "tags": ["Brand Identity", "Logo Design", "Design"],
+      "position": "down" 
+    }
+  ]
+}
