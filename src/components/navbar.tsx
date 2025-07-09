@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
 
-const ConnectButton = ({ label }) => (
+const ConnectButton = () => (
   <button className="flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 px-4 py-2 rounded-full shadow-sm border border-white/20 hover:border-white/40 group">
-    <span className="text-sm font-semibold text-[var(--color-dark)] mr-2">{label}</span>
+    <span className="text-sm font-semibold text-[var(--color-dark)] mr-2"></span>
     <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
       <ArrowRight size={16} />
     </div>
@@ -20,7 +20,6 @@ export const Navbar = () => {
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "/about" },
     { label: "SERVICES", href: "/services" },
-    { label: "", href: "/pricing" },
   ];
 
   const handleLinkClick = () => {
