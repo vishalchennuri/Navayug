@@ -6,7 +6,6 @@ import WorksSection from "../components/worksSection";
 import ProcessComponent from "../components/processSection";
 import ServicesSection from "../components/servicesSection";
 import FeaturesSection from "../components/featuresSection";
-import PricingSection from "../components/plans-pricing";
 
 export default function LandingPage() {
   return (
