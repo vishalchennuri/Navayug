@@ -23,7 +23,7 @@ export default function ServiceCard({
       {/* Middle: Content */}
       <div className="flex flex-col ">
         <div>
-          <h2 className="text-base md:text-2xl  font-text text-[var(--color-dark)] ">
+          <h2 className="text-2xl md:text-2xl  font-text text-[var(--color-dark)] ">
             {title}
           </h2>
           <p className="mt-1.5 text-lg sm:text-md text-[var(--color-soft-gray)] mt-2 mb-6  leading-snug font-text max-w-xl">
@@ -44,7 +44,7 @@ export default function ServiceCard({
         <img
           src={image}
           alt={title}
-          className="w-full max-w-[250px] h-full object-contain"
+          className="w-full md:max-w-[250px] h-full object-contain"
         />
       </div>
     </div>

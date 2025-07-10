@@ -35,7 +35,7 @@ export default function MethodologySection() {
   ];
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-20 bg-white">
+    <section className="px-3 md:px-10 lg:px-16 py-20 bg-white">
        <div className="max-w-7xl mx-auto">
        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12">
          <div className="flex-1">

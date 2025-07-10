@@ -1,12 +1,8 @@
-
-
 import ConnectButton from "../ui/connectButton";
 
 export default function HeroSection() {
   return (
-    <section
-      className="pt-32 min-h-screen px-6 md:px-10 lg:px-16 flex flex-col bg-[url('/gridimg.png')] bg-cover bg-center"
-    >
+    <section className="pt-45 md:pt-0 md:min-h-screen px-4 md:px-10 lg:px-16 flex flex-col bg-[url('/gridimg.png')] bg-cover bg-center">
       <div className="flex-1 flex flex-col justify-center items-center text-center max-w-3xl mx-auto">
         <h1 className="leading-tight text-[var(--color-dark)]">
           <img
@@ -27,9 +23,9 @@ export default function HeroSection() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <ConnectButton to="/contact" label="LETS CONNECT" />
-          <button className="bg-[var(--color-dark)] text-white px-5 py-2.5 rounded-full shadow-sm">
+          {/* <button className="bg-[var(--color-dark)] text-white px-5 py-2.5 rounded-full shadow-sm">
             PLANS & PRICING
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

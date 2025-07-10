@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function ConnectButton({ label = "LET'S CONNECT", to = "/" }) {
+export default function ConnectButton({ label = "LET'S CONNECT", to = "/contact" }) {
   const navigate = useNavigate();
 
   return (
@@ -17,7 +17,7 @@ export default function ConnectButton({ label = "LET'S CONNECT", to = "/" }) {
            }}></div>
       
       {/* Content */}
-      <span className="relative z-10 text-sm sm:text-base font-semibold text-black group-hover:text-white transition-all duration-200 truncate group-hover:scale-110 transform origin-left">
+      <span className="relative z-10 text-sm sm:text-base font-text text-black group-hover:text-white transition-all duration-200 truncate group-hover:scale-110 transform origin-left">
         {label}
       </span>
 

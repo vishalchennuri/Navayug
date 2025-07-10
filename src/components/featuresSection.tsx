@@ -1,5 +1,3 @@
-
-
 import SectionHeader from "../ui/sectionHeader";
 import ConnectButton from "../ui/connectButton";
 import FeatureCards from "../ui/featuresCard";

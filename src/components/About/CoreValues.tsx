@@ -6,11 +6,11 @@ import { Zap, BarChart3, Target, TrendingUp } from "lucide-react";
 
 export default function CoreValuesSection() {
   return (
-    <section className="px-6 md:px-10 lg:px-10 py-20 bg-white">
+    <section className="px-3 md:px-10 lg:px-10 py-10 md:py-20 bg-white">
          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-12">
         <div className="flex-1">
           <SectionHeader title="OUR CORE VALUES" />
-          <h2 className="text-2xl lg:text-3xl font-text font-semibold text-[var(--color-dark)] mt-2 leading-tight tracking-tight">
+          <h2 className="text-3xl lg:text-3xl font-text font-semibold text-[var(--color-dark)] mt-2 leading-tight tracking-tight">
             4 Uncompromising Principles
           </h2>
         

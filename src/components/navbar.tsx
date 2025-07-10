@@ -1,20 +1,14 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
+import ConnectButton from "../ui/connectButton";
 
 // Fix 1: Add proper TypeScript interface for ConnectButton props
 interface ConnectButtonProps {
   label: string;
 }
 
-const ConnectButton = ({ label }: ConnectButtonProps) => (
-  <button className="flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 px-4 py-2 rounded-full shadow-sm border border-white/20 hover:border-white/40 group">
-    <span className="text-sm font-semibold text-[var(--color-dark)] mr-2">{label}</span>
-    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-      <ArrowRight size={16} />
-    </div>
-  </button>
-);
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl">
-      <div className="bg-white/80 backdrop-blur-md border border-orange-500/30 rounded-4xl px-6 lg:px-8 py-4 shadow-lg shadow-orange-500/5">
+      <div className="bg-white/40 backdrop-blur-sm border border-orange-500/30 rounded-4xl px-6 lg:px-8 py-4 shadow-lg shadow-orange-500/5">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="h-10 md:h-6 lg:h-10 flex items-center">
@@ -113,7 +107,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <ConnectButton label="CONTACT US" />
+                <ConnectButton label="CONTACT US" to="contact" />
               </div>
             </div>
           </div>

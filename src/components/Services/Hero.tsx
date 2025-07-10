@@ -2,11 +2,11 @@ import ConnectButton from "../../ui/connectButton";
 
 export default function HeroSectionAbout() {
   return (
-    <section className="min-h-[calc(100vh-80px)] px-6 md:px-10 lg:px-16 bg-[url('/gridimg.png')] bg-cover bg-center flex items-center">
+    <section className="pt-30 md:min-h-[calc(100vh-80px)] px-6 md:px-10 lg:px-16 bg-[url('/gridimg.png')] bg-cover bg-center flex items-center">
       <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row-reverse items-center justify-between gap-16">
         
         <div className="flex-1 text-left">
-          <h1 className="leading-tight text-[var(--color-dark)] mb-4">
+          <h1 className="leading-tight text-[var(--color-dark)] mb-2">
             <img
               src="/Services/Precision-Led.png"
               alt="Precision Led"
@@ -23,13 +23,13 @@ export default function HeroSectionAbout() {
             We architect always-on systems—not one-off projects.
           </p>
 
-          <div className="flex flex-row gap-4 flex-wrap justify-center lg:justify-start">
+          <div className="flex flex-row flex-wrap justify-center lg:justify-start">
             <ConnectButton to="/contact" label="LETS CONNECT" />
-            <button
+            {/* <button
               className="inline-flex items-center justify-center bg-[var(--color-dark)] text-white text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-sm hover:bg-black transition whitespace-nowrap min-w-0 max-w-full"
             >
               PLANS & PRICING
-            </button>
+            </button> */}
           </div>
         </div>
 

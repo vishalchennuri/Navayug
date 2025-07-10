@@ -32,23 +32,24 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-white border-[--color-soft-gray] px-6 md:px-10 lg:px-16 py-10 w-full">
+    <section className="bg-white border-[--color-soft-gray] px-2 md:px-10 lg:px-16 py-10 w-full">
       <DottedLine className="mt-0 mb-6" />
 
       <div className="flex flex-col lg:flex-row min-h-[70vh]">
-        <div className="lg:w-1/2 flex items-center justify-center p-6">
-          <img
-            src="/contact.png"
-            alt="Contact"
-            className="w-[100%] h-auto object-contain"
-          />
-        </div>
+<div className="hidden md:flex lg:w-1/2 items-center justify-center p-6">
+  <img
+    src="/contact.png"
+    alt="Contact"
+    className="w-full h-auto object-contain"
+  />
+</div>
+
 
         <div className="hidden lg:flex justify-center">
           <VerticalDottedLine className="mx-6 h-[80%]" />
         </div>
 
-        <div className="lg:w-1/2 flex items-center justify-center p-4">
+        <div className="lg:w-1/2 flex items-center justify-center ">
           <div className="w-full max-w-lg">
             <div className="mb-8">
               <h1 className="text-2xl lg:text-3xl font-text  text-[--color-dark] mb-4 tracking-tight font-display">
