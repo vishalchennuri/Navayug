@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ConnectButton from "../ui/connectButton";
-
-// Fix 1: Add proper TypeScript interface for ConnectButton props
-interface ConnectButtonProps {
-  label: string;
-}
-
-
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +49,7 @@ export const Navbar = () => {
                 <span className="relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">
                   {label}
                 </span>
-                <span 
+                <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-orange-500 transition-all duration-300 ${
                     currentPath === href ? "w-full" : "w-0 group-hover:w-full"
                   }`}
@@ -97,7 +90,7 @@ export const Navbar = () => {
                   <span className="relative z-10 transition-all duration-300 group-hover:tracking-wider">
                     {label}
                   </span>
-                  <span 
+                  <span
                     className={`absolute bottom-0 left-0 h-0.5 bg-orange-500 transition-all duration-300 ${
                       currentPath === href ? "w-full" : "w-0 group-hover:w-full"
                     }`}
