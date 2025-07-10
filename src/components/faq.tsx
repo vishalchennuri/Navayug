@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import { Plus } from "lucide-react"
 import SectionHeader from "../ui/sectionHeader"
@@ -61,12 +60,11 @@ const FAQItemComponent = ({
 
 
 export default function Faq() {
-  const [openItems, setOpenItems] = useState<Set<string>>(new Set(["1"]))
+  const [openItemId, setOpenItemId] = useState<string | null>("1")
 
   const toggleItem = (id: string) => {
-    const newOpenItems = new Set(openItems)
-    newOpenItems.has(id) ? newOpenItems.delete(id) : newOpenItems.add(id)
-    setOpenItems(newOpenItems)
+    // If clicking the currently open item, close it. Otherwise, open the clicked item.
+    setOpenItemId(openItemId === id ? null : id)
   }
 
   return (
@@ -89,7 +87,7 @@ export default function Faq() {
           <FAQItemComponent
             key={item.id}
             item={item}
-            isOpen={openItems.has(item.id)}
+            isOpen={openItemId === item.id}
             onToggle={() => toggleItem(item.id)}
           />
         ))}
