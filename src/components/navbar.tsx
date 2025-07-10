@@ -17,6 +17,10 @@ export const Navbar = () => {
     setIsOpen(false);
   };
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl">
@@ -64,9 +68,10 @@ export const Navbar = () => {
 
             {/* Mobile Toggle Button - Custom Hamburger */}
             <button
-              className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center text-[var(--color-dark)] hover:text-orange-500 transition-colors duration-300 z-[60]"
-              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center text-[var(--color-dark)] hover:text-orange-500 transition-colors duration-300 z-[60] touch-manipulation"
+              onClick={handleToggle}
               aria-label="Toggle Navigation"
+              type="button"
             >
               <span
                 className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
@@ -90,7 +95,7 @@ export const Navbar = () => {
 
       {/* Full-Screen Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 z-[55] md:hidden transition-all duration-500 ease-in-out ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -101,6 +106,7 @@ export const Navbar = () => {
           className={`absolute inset-0 bg-black/20 backdrop-blur-md transition-all duration-500 ease-in-out ${
             isOpen ? "backdrop-blur-md" : "backdrop-blur-0"
           }`}
+          onClick={handleLinkClick}
         ></div>
 
         {/* Menu Content */}
@@ -116,7 +122,7 @@ export const Navbar = () => {
                 key={idx}
                 to={href}
                 onClick={handleLinkClick}
-                className={`relative text-2xl font-bold uppercase tracking-wider transition-all duration-300 group cursor-pointer transform ${
+                className={`relative text-2xl font-bold uppercase tracking-wider transition-all duration-300 group cursor-pointer transform touch-manipulation ${
                   currentPath === href
                     ? "text-orange-500 scale-110"
                     : "text-[var(--color-dark)] hover:text-orange-500 hover:scale-110"
@@ -127,7 +133,7 @@ export const Navbar = () => {
                   transitionDelay: isOpen ? `${idx * 100}ms` : "0ms",
                 }}
               >
-                <span className="relative z-10 transition-all duration-300 group-hover:tracking-[0.2em]">
+                <span className="relative z-10 transition-all duration-300 group-hover:tracking-[0.2em] block py-2 px-4">
                   {label}
                 </span>
                 <span
@@ -148,14 +154,15 @@ export const Navbar = () => {
               style={{
                 transitionDelay: isOpen ? `${navLinks.length * 100}ms` : "0ms",
               }}
+              onClick={handleLinkClick}
             >
               <ConnectButton label="CONTACT US" to="contact" />
             </div>
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-orange-500/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-xl animate-pulse pointer-events-none"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-orange-500/5 rounded-full blur-xl animate-pulse pointer-events-none" style={{ animationDelay: "1s" }}></div>
         </div>
       </div>
     </>
