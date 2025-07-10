@@ -14,7 +14,7 @@ export const Navbar = () => {
   ];
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close mobile menu when link is clicked
+    setIsOpen(false);
   };
 
   return (
