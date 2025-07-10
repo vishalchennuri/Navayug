@@ -1,4 +1,3 @@
-
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./navbar";
 import Footer from "./footer";
@@ -7,20 +6,16 @@ import Testimonials from "./testimonials";
 import ContactForm from "./contact";
 import DottedLine from "../ui/dottedline";
 
+import FadeInWhenVisible from "../utils/FadeInWhenVisible"; // ✅ Add this import
+
 export default function Layout() {
   return (
     <>
       <Navbar />
-      
-      <main className="min-h-screen ">
+
+      <main className="min-h-screen">
         <Outlet />
-        <DottedLine className="my-4" />
 
-        <Testimonials />
-        <DottedLine className="my-4" />
-        <Faq />
-
-        <ContactForm />
       </main>
 
       <Footer />
