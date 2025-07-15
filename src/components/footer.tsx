@@ -61,9 +61,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-text font-semibold mb-4 text-[--color-soft-gray]">Contact</h3>
             <div className="space-y-2 text-[--color-soft-gray] text-base">
-              <p>Hyderabad, Telangana</p>
-              <p>+91 8886880567</p>
-              <p>info@techmocha.in</p>
+              <p>plot no - 95, venkateswara colony, suchitra, Hyderabad, 500055</p>
+              <p>+91 9492066702</p>
+              <p>+91 9492066703</p>
+              <p>navayugdigital@gmail.com</p>
             </div>
           </div>
         </div>
