@@ -21,7 +21,7 @@ export default function ServiceCard({ id, title, description, image }: ServiceCa
         </p>
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center overflow-hidden">
         <img
           src={image || "/placeholder.svg"}
           alt={title}
