@@ -1,4 +1,3 @@
-// App.jsx or wherever your routes are defined
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -10,7 +9,6 @@ import PlansAndPricing from "./pages/Plans";
 import Contact from "./pages/ContactUS";
 import ErrorPage from "./pages/Error";
 
-// ScrollToTop component
 function ScrollToTop() {
   const { pathname } = useLocation();
 
