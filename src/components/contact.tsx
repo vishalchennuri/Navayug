@@ -1,12 +1,12 @@
-import { useState } from "react"
-import DottedLine from "../ui/dottedline"
-import VerticalDottedLine from "../ui/verticaldotted"
-import { ArrowRight } from "lucide-react"
+import { useState } from "react";
+import DottedLine from "../ui/dottedline";
+import VerticalDottedLine from "../ui/verticaldotted";
+import { ArrowRight } from "lucide-react";
 
 interface FormData {
-  fullName: string
-  email: string
-  message: string
+  fullName: string;
+  email: string;
+  message: string;
 }
 
 export default function ContactForm() {
@@ -14,36 +14,46 @@ export default function ContactForm() {
     fullName: "",
     email: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    console.log("Form submitted:", formData)
-    setIsSubmitting(false)
-    setFormData({ fullName: "", email: "", message: "" })
-  }
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const whatsappNumber = "+919398494080"; // Your WhatsApp number
+    const message = `Hello, I'm ${formData.fullName}.\nEmail: ${formData.email}\n\nMy Requirement: ${formData.message}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, "_blank");
+
+    // Simulate submission delay if needed, though for WhatsApp redirect it's not strictly necessary for the user experience
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    console.log("Form data prepared for WhatsApp:", formData);
+    setIsSubmitting(false);
+    setFormData({ fullName: "", email: "", message: "" }); // Clear the form after preparing the message
+  };
 
   return (
     <section className="bg-white border-[--color-soft-gray] px-2 md:px-10 lg:px-16 py-10 w-full">
       <DottedLine className="mt-0 mb-6" />
 
       <div className="flex flex-col lg:flex-row min-h-[70vh]">
-<div className="hidden md:flex lg:w-1/2 items-center justify-center p-6">
-  <img
-    src="/contact.png"
-    alt="Contact"
-    className="w-full h-auto object-contain"
-  />
-</div>
-
+        <div className="hidden md:flex lg:w-1/2 items-center justify-center p-6">
+          <img
+            src="/contact.png"
+            alt="Contact"
+            className="w-full h-auto object-contain"
+          />
+        </div>
 
         <div className="hidden lg:flex justify-center">
           <VerticalDottedLine className="mx-6 h-[80%]" />
@@ -115,15 +125,15 @@ export default function ContactForm() {
                   className={`relative flex items-center flex-nowrap justify-between px-4 py-2 bg-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-200 min-w-0 max-w-full overflow-hidden group cursor-pointer hover:scale-105 transform ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
                   {/* Fill animation background - faster and irregular shape */}
-                  <div className="absolute inset-0 bg-orange-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-200 ease-out" 
+                  <div className="absolute inset-0 bg-orange-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-200 ease-out"
                        style={{
                          clipPath: 'polygon(0% 0%, 85% 0%, 100% 35%, 90% 65%, 95% 100%, 0% 100%)',
                          borderRadius: '9999px'
                        }}></div>
-                  
+
                   {/* Content */}
                   <span className="relative z-10 text-sm sm:text-base font-semibold text-black group-hover:text-white transition-all duration-200 truncate group-hover:scale-110 transform origin-left">
-                    {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                    {isSubmitting ? "PREPARING WHATSAPP..." : "SEND MESSAGE"}
                   </span>
 
                   <span className="relative z-10 ml-3 flex items-center justify-center w-8 h-8 rounded-full bg-orange-500 group-hover:bg-white text-white group-hover:text-orange-500 shadow-md flex-shrink-0 transition-all duration-200 group-hover:scale-110 transform">
@@ -138,5 +148,5 @@ export default function ContactForm() {
 
       <DottedLine className="mt-6 " />
     </section>
-  )
+  );
 }
