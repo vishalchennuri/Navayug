@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useForm, ValidationError } from '@formspree/react';
+import toast, { Toaster } from 'react-hot-toast';
 import DottedLine from "../ui/dottedline";
 import VerticalDottedLine from "../ui/verticaldotted";
 import { ArrowRight } from "lucide-react";
@@ -15,7 +17,57 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Formspree hook
+  const [state, handleFormspreeSubmit] = useForm("xyzpoedy");
+
+  // Handle success/error states with useEffect
+  useEffect(() => {
+    if (state.succeeded) {
+      // Show success toast
+      toast.success('Message sent successfully! We\'ll get back to you soon.', {
+        duration: 4000,
+        position: 'top-center',
+        style: {
+          background: '#10B981',
+          color: '#fff',
+          padding: '16px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '500'
+        },
+        iconTheme: {
+          primary: '#fff',
+          secondary: '#10B981',
+        },
+      });
+      
+      // Clear the form
+      setFormData({ fullName: "", email: "", message: "" });
+    }
+  }, [state.succeeded]);
+
+  useEffect(() => {
+    if (state.errors && state.errors.length > 0 && !state.submitting) {
+      // Show error toast if there are submission errors
+      toast.error('Failed to send message. Please try again.', {
+        duration: 4000,
+        position: 'top-center',
+        style: {
+          background: '#EF4444',
+          color: '#fff',
+          padding: '16px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '500'
+        },
+        iconTheme: {
+          primary: '#fff',
+          secondary: '#EF4444',
+        },
+      });
+    }
+  }, [state.errors, state.submitting]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,22 +76,8 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    const whatsappNumber = "+919398494080"; // Your WhatsApp number
-    const message = `Hello, I'm ${formData.fullName}.\nEmail: ${formData.email}\n\nMy Requirement: ${formData.message}`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp in a new tab/window
-    window.open(whatsappUrl, "_blank");
-
-    // Simulate submission delay if needed, though for WhatsApp redirect it's not strictly necessary for the user experience
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    console.log("Form data prepared for WhatsApp:", formData);
-    setIsSubmitting(false);
-    setFormData({ fullName: "", email: "", message: "" }); // Clear the form after preparing the message
+    // Simply call the Formspree handler - useEffect will handle the rest
+    await handleFormspreeSubmit(e);
   };
 
   return (
@@ -84,6 +122,12 @@ export default function ContactForm() {
                   required
                   className="w-full px-0 py-4 text-lg border-0 border-b-2 border-gray-300 bg-transparent text-[--color-dark] placeholder-gray-400 focus:border-gray-500 focus:outline-none font-text"
                 />
+                <ValidationError 
+                  prefix="Full Name" 
+                  field="fullName"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
               <div>
@@ -99,6 +143,12 @@ export default function ContactForm() {
                   placeholder="Enter your Gmail"
                   required
                   className="w-full px-0 py-4 text-lg border-0 border-b-2 border-gray-300 bg-transparent text-[--color-dark] placeholder-gray-400 focus:border-gray-500 focus:outline-none font-text"
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
                 />
               </div>
 
@@ -116,13 +166,19 @@ export default function ContactForm() {
                   required
                   className="w-full px-0 py-4 text-lg border-0 border-b-2 border-gray-300 bg-transparent text-[--color-dark] placeholder-gray-400 focus:border-gray-500 focus:outline-none resize-none font-text"
                 />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className={`relative flex items-center flex-nowrap justify-between px-4 py-2 bg-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-200 min-w-0 max-w-full overflow-hidden group cursor-pointer hover:scale-105 transform ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+                  disabled={state.submitting}
+                  className={`relative flex items-center flex-nowrap justify-between px-4 py-2 bg-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-200 min-w-0 max-w-full overflow-hidden group cursor-pointer hover:scale-105 transform ${state.submitting ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
                   {/* Fill animation background - faster and irregular shape */}
                   <div className="absolute inset-0 bg-orange-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-200 ease-out"
@@ -133,7 +189,7 @@ export default function ContactForm() {
 
                   {/* Content */}
                   <span className="relative z-10 text-sm sm:text-base font-semibold text-black group-hover:text-white transition-all duration-200 truncate group-hover:scale-110 transform origin-left">
-                    {isSubmitting ? "PREPARING WHATSAPP..." : "SEND MESSAGE"}
+                    {state.submitting ? "SENDING..." : "SEND MESSAGE"}
                   </span>
 
                   <span className="relative z-10 ml-3 flex items-center justify-center w-8 h-8 rounded-full bg-orange-500 group-hover:bg-white text-white group-hover:text-orange-500 shadow-md flex-shrink-0 transition-all duration-200 group-hover:scale-110 transform">
@@ -147,6 +203,9 @@ export default function ContactForm() {
       </div>
 
       <DottedLine className="mt-6 " />
+      
+      {/* Toast Container */}
+      <Toaster />
     </section>
   );
 }
