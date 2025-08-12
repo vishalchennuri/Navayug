@@ -48,7 +48,8 @@ export default function ContactForm() {
   }, [state.succeeded]);
 
   useEffect(() => {
-    if (state.errors && state.errors.length > 0 && !state.submitting) {
+    // Check if there are errors and not currently submitting
+    if (state.errors && Object.keys(state.errors).length > 0 && !state.submitting) {
       // Show error toast if there are submission errors
       toast.error('Failed to send message. Please try again.', {
         duration: 4000,
@@ -74,10 +75,14 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simply call the Formspree handler - useEffect will handle the rest
-    await handleFormspreeSubmit(e);
+    // Create FormData from the form element
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Call the Formspree handler with the form data
+    handleFormspreeSubmit(formData);
   };
 
   return (
