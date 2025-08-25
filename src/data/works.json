@@ -1,20 +1,97 @@
 {
   "projects": [
     {
-      "id": 1,
-      "title": "Plant In",
-      "year": "2024",
-      "image": "/w1.png",
-      "tags": ["UX/UI", "App Development", "Design"],
-      "position": "up"
+  "id": 1,
+  "title": "Plant In",
+  "year": "2024",
+  "image": "/w1.png",
+  "tags": ["UX/UI", "App Development", "Design"],
+  "client": "The Plant In United States",
+  "heading": "Bridging traditional assets and intelligent finance",
+  "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+  "services": ["Website Design ,", "App Design"],
+  "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+  "website": "https://stallionxtremefitness.com/",
+  "position": "up",
+  "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
     },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+  "posts": [
+    {
+      "type": "image",
+      "src": "https://media.licdn.com/dms/image/v2/D4D22AQHBF0LRc-chbg/feedshare-shrink_800/feedshare-shrink_800/0/1695106437002?e=2147483647&v=beta&t=b-gB_4p-jK_oRtbz293J83IHmpeRgjKlda_pmxBtqUg"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7wcjLDuhVyoLEne9QC-bKK8x6Ul0Yjq_zzg&s"
+    },
+    {
+      "type": "image",
+      "src": "https://media.allforsport.in/community_challenges/eb556516-7700-4eb0-b09d-8d03dda439a5.png"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUCMk0DsEaByQexK_DCn-KYRxeZ7YLPD56BQ&s"
+    }
+  ]
+},
+
     {
       "id": 2,
       "title": "Esco",
       "year": "2025",
       "image": "/w2.png",
       "tags": ["Branding", "Logo Design", "Marketing"],
-      "position": "down"
+      "client":"The Plant In United States",
+      "heading":"Bridging traditional assets and intelligent finance",
+        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+      "services":["Website Design ,","App Design"],
+       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+      "website": "https://stallionxtremefitness.com/",
+      "position": "down",
+      "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+  "posts": [
+    {
+      "type": "image",
+      "src": "https://media.licdn.com/dms/image/v2/D4D22AQHBF0LRc-chbg/feedshare-shrink_800/feedshare-shrink_800/0/1695106437002?e=2147483647&v=beta&t=b-gB_4p-jK_oRtbz293J83IHmpeRgjKlda_pmxBtqUg"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7wcjLDuhVyoLEne9QC-bKK8x6Ul0Yjq_zzg&s"
+    },
+    {
+      "type": "image",
+      "src": "https://media.allforsport.in/community_challenges/eb556516-7700-4eb0-b09d-8d03dda439a5.png"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUCMk0DsEaByQexK_DCn-KYRxeZ7YLPD56BQ&s"
+    }
+  ]
     },
     {
           "id": 3,
@@ -22,14 +99,90 @@
       "year": "2024",
       "image": "/w3.png",
       "tags": ["Web Design", "Web Development", "UX/UI"],
-      "position": "up" 
+      "client":"The Plant In United States",
+      "heading":"Bridging traditional assets and intelligent finance",
+        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+         "services":["Website Design ,","App Design"],
+       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+      "website": "https://stallionxtremefitness.com/",
+      "position": "up" ,
+      "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+  "posts": [
+    {
+      "type": "image",
+      "src": "https://media.licdn.com/dms/image/v2/D4D22AQHBF0LRc-chbg/feedshare-shrink_800/feedshare-shrink_800/0/1695106437002?e=2147483647&v=beta&t=b-gB_4p-jK_oRtbz293J83IHmpeRgjKlda_pmxBtqUg"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7wcjLDuhVyoLEne9QC-bKK8x6Ul0Yjq_zzg&s"
+    },
+    {
+      "type": "image",
+      "src": "https://media.allforsport.in/community_challenges/eb556516-7700-4eb0-b09d-8d03dda439a5.png"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUCMk0DsEaByQexK_DCn-KYRxeZ7YLPD56BQ&s"
+    }
+  ]
     },{
           "id": 4,
       "title": "Truway",
       "year": "2025",
       "image": "/w4.png",
       "tags": ["Brand Identity", "Logo Design", "Design"],
-      "position": "down" 
+      "client":"The Plant In United States",
+      "heading":"Bridging traditional assets and intelligent finance",
+        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+         "services":["Website Design ,","App Design"],
+       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+      "website": "https://stallionxtremefitness.com/",
+      "position": "down" ,
+      "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+  "posts": [
+    {
+      "type": "image",
+      "src": "https://media.licdn.com/dms/image/v2/D4D22AQHBF0LRc-chbg/feedshare-shrink_800/feedshare-shrink_800/0/1695106437002?e=2147483647&v=beta&t=b-gB_4p-jK_oRtbz293J83IHmpeRgjKlda_pmxBtqUg"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7wcjLDuhVyoLEne9QC-bKK8x6Ul0Yjq_zzg&s"
+    },
+    {
+      "type": "image",
+      "src": "https://media.allforsport.in/community_challenges/eb556516-7700-4eb0-b09d-8d03dda439a5.png"
+    },
+    {
+      "type": "image",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUCMk0DsEaByQexK_DCn-KYRxeZ7YLPD56BQ&s"
+    }
+  ]
     }
   ]
 }

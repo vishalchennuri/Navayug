@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import projectData from "../data/works.json";
 import ConnectButton from "../ui/connectButton";
 import SectionHeader from "../ui/sectionHeader";
@@ -12,12 +13,13 @@ interface Project {
   position: "up" | "down";
 }
 
-const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({ project }: { project: Project }) => {
   const positionClass =
     project.position === "up" ? "lg:-translate-y-8" : "lg:translate-y-8";
 
   return (
     <>
+     <Link to={`/project/${project.id}`}>
       <div className="md:hidden mb-10">
         <div className="relative w-full h-[280px] mb-4 rounded-lg overflow-hidden">
           <img
@@ -91,6 +93,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 };
