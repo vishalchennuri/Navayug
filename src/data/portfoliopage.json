@@ -1,0 +1,52 @@
+{
+  "portfolio": [
+    {
+  "title": "Stallion Xtreme fitness",
+  "year": "2024",
+  "image": "/w1.png",
+  "tags": ["UX/UI", "App Development", "Design"],
+  "client": "Stallion Xtreme fitness",
+  "heading": "Stallion Xtreme fitness-Your Ultimate Fitness Companion",
+  "description1": "Stallion Extreme Fitness is a modern, feature-rich fitness platform designed to empower individuals on their health and wellness journey. Whether you're a beginner or a seasoned athlete, Stallion provides personalized workout plans, real-time progress tracking, expert nutritional guidance, and interactive fitness challenges to keep you motivated.",
+  "description2": "",
+  "services": ["Website Design "],
+  "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+  "website": "https://stallionxtremefitness.com/",
+  "position": "up",
+  "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+  "posts": [
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic1.png"
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic2.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic3.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic4.png"
+
+    }
+  ]
+}
+  ]
+}

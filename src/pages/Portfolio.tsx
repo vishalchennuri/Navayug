@@ -1,162 +1,208 @@
-// const Portfolio = () => {
-//   return (
-//     <div className="pt-20 min-h-screen bg-gradient-to-br  flex items-center justify-center p-8">
-//       <div className="w-full max-w-7xl">
-//         {/* Header */}
-//         <div className="text-center mb-8">
-//           <h1 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
-//             Portfolio Display
-//           </h1>
-//           <p className="text-gray-300 text-lg">
-//             Showcasing Stallion Xtreme Fitness Website
-//           </p>
-//         </div>
 
-//         {/* Display Screen Container */}
-//         <div className="flex justify-center">
-//           {/* Screen Frame */}
-//           <div className="bg-gray-900 rounded-2xl p-4 shadow-2xl w-full max-w-6xl">
-//             {/* Top Bar */}
-//             <div className="flex items-center justify-between mb-4">
-//               <div className="flex space-x-2">
-//                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-//                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-//                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-//               </div>
-//               <div className="flex-1 mx-4">
-//                 <div className="bg-gray-800 rounded-lg px-4 py-2 text-gray-400 text-sm font-mono">
-//                   https://stallionxtremefitness.com/
-//                 </div>
-//               </div>
-//               <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center">
-//                 <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-//                 </svg>
-//               </div>
-//             </div>
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
+import portfolioData from "../data/portfoliopage.json"; 
+import SectionHeader from "../ui/sectionHeader";
+import FadeInWhenVisible from "../utils/FadeInWhenVisible";
+import Contact from "../components/contact";
+import projectData from "../data/works.json";
+import ShortsAndPosts from "../components/portfolio-posts";
+import Portfolio from "../components/PortfolioWebsite";
+import { ProjectCard } from "../components/worksSection";
 
-//             {/* Website Display */}
-//             <div className="relative bg-white rounded-xl overflow-hidden shadow-lg w-full" style={{ height: '70vh' }}>
-//               <iframe
-//                 src="https://stallionxtremefitness.com/"
-//                 className="w-full h-full border-none"
-//                 title="Stallion Xtreme Fitness Website"
-//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//                 loading="lazy"
-//               />
-              
-//               {/* Loading overlay */}
-//               <div className="absolute inset-0 bg-gray-100 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" id="loading-overlay">
-//                 <div className="text-center">
-//                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-//                   <p className="text-gray-600">Loading website...</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
+interface Short {
+  type: "video";
+  src: string;
+  thumbnail?: string;
+}
 
-//         {/* Additional Info */}
-//         <div className="mt-8 text-center">
-//           <p className="text-gray-400 text-sm">
-//             Interactive portfolio showcase • Click and explore the embedded website
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+interface Post {
+  type: "image";
+  src: string;
+}
 
-// export default Portfolio
-
-type PortfolioProps = {
+interface PortfolioProject {
+  id: number;
   title: string;
+  year: string;
+  image: string;
+  tags: string[];
+  client?: string;
+  heading?: string;
+  description1?: string;
+  description2?: string;
+  services?: string[];
+  video?: string;
   website: string;
-};
+  position: "up" | "down";
+  shorts?: Short[];
+  posts?: Post[];
+}
 
-const Portfolio = ({ title, website }: PortfolioProps) => {
+interface Project {
+  id: number;
+  title: string;
+  year?: string;
+  image?: string;
+  tags?: string[];
+  client?: string;
+  heading?: string;
+  description1?: string;
+  description2?: string;
+  services?: string[];
+  video?: string;
+  website?: string;
+  position?: "up" | "down";
+  shorts?: Short[];
+  posts?: Post[];
+}
+
+const typedProjectData = projectData as { projects: Project[] };
+const typedPortfolioData = portfolioData as { portfolio: PortfolioProject[] };
+
+function shuffleArray<T>(array: T[]): T[] {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+export default function PortfolioPage() {
+  const project = typedPortfolioData.portfolio[0];
+const recommendations: Project[] = useMemo(
+  () =>
+    shuffleArray(
+      typedProjectData.projects.filter((p) => p.id !== Number(project.id))
+    ).slice(0, 2),
+  [project.id]
+);
+
+
   return (
-    <div className="pt-20 mb-10 min-h-screen bg-gradient-to-br flex items-center justify-center p-8">
-      <div className="w-full max-w-7xl">
-        {/* Header */}
-        {/* <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
-            Portfolio Display
-          </h1>
-          <p className="text-gray-300 text-lg">
-            Showcasing {title} Website
-          </p>
-        </div> */}
-
-        {/* Display Screen Container */}
-        <div className="flex justify-center">
-          {/* Screen Frame */}
-          <div className="bg-gray-900 rounded-2xl p-4 shadow-2xl w-full max-w-6xl">
-            {/* Top Bar */}
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex space-x-2">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              </div>
-              <div className="flex-1 mx-4">
-                <div className="bg-gray-800 rounded-lg px-4 py-2 text-gray-400 text-sm font-mono">
-                  {website}
-                </div>
-              </div>
-              <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            {/* Website Display */}
-            <div
-              className="relative bg-white rounded-xl overflow-hidden shadow-lg w-full"
-              style={{ height: "70vh" }}
-            >
-              <iframe
-                src={website}
-                className="w-full h-full border-none"
-                title={title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                loading="lazy"
-              />
-
-              {/* Loading overlay */}
-              <div
-                className="absolute inset-0 bg-gray-100 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
-                id="loading-overlay"
-              >
-                <div className="text-center">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                  <p className="text-gray-600">Loading website...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Info */}
-        {/* <div className="mt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            Interactive portfolio showcase • Click and explore the embedded website
-          </p>
-        </div> */}
+    <section className="px-6 md:px-10 lg:px-16 py-12">
+      {/* Breadcrumb */}
+      <div className="text-sm text-gray-500 mb-6 flex items-center font-medium space-x-2 font-text leading-light text-gray-400">
+        <Link to="/" className="hover">Home</Link>
+        <span>/</span>
+        <Link to="/portfolio" className="hover">Portfolio</Link>
+        <span>/</span>
+        <span className="font-medium font-text text-[var(--color-gray)]">
+          {project.title}
+        </span>
       </div>
-    </div>
-  );
-};
 
-export default Portfolio;
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-6 text-medium font-display text-[var(--color-dark)]">
+        {project.tags.map((tag, index) => (
+          <span key={index} className="px-3 py-1 text-sm border rounded-full">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {/* Title */}
+      <h1 className="text-4xl font-medium text-[var(--color-dark)] mb-5">
+        <span className="font-[InstrumentSerifItalic] italic text-[var(--color-soft-gray)] mr-1">
+          the
+        </span>
+        <span className="text-[var(--color-dark)] font-display font-text">
+          {project.title}
+        </span>
+      </h1>
+
+      {/* Video or Image */}
+      <FadeInWhenVisible delay={0.5}>
+        {project.video ? (
+          <div className="w-full h-56 md:h-72 lg:h-96 shadow-md bg-gray-50 mb-5">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src={project.video}
+              title={project.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-56 md:h-72 lg:h-96 shadow-md bg-gray-50 mb-5"
+          />
+        )}
+      </FadeInWhenVisible>
+
+      {/* Overview */}
+      <FadeInWhenVisible delay={0.5}>
+        <SectionHeader title="OVERVIEW" />
+        <div className="w-full md:items-start md:space-x-8">
+          <h2 className="text-2xl font-text text-[var(--color-dark)] mb-4 md:w-1/2">
+            {project.heading}
+          </h2>
+
+          <p className="mb-5 text-display font-display text-[var(--color-soft-gray)] md:w-2/3 md:ml-[30%]">
+            {project.description1}
+          </p>
+
+          {project.description2 && (
+            <p className="mb-5 text-display font-display text-[var(--color-soft-gray)] md:w-2/3 md:ml-[30%]">
+              {project.description2}
+            </p>
+          )}
+
+          {project.client && (
+            <div className="mb-5 md:w-2/3 md:ml-[30%]">
+              <h3 className="font-text text-[var(--color-dark)] text-xl">Client</h3>
+              <p className="text-display font-display text-[var(--color-soft-gray)]">
+                {project.client}
+              </p>
+            </div>
+          )}
+
+          {project.services && (
+            <div className="mb-5 md:w-2/3 md:ml-[30%]">
+              <h3 className="font-text text-[var(--color-dark)] text-xl">Services</h3>
+              <div className="text-display font-display text-[var(--color-soft-gray)]">
+                {project.services.map((service, index) => (
+                  <span key={index} className="mr-2">{service}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </FadeInWhenVisible>
+
+      {/* Portfolio Website */}
+      <FadeInWhenVisible delay={0.5}>
+        <Portfolio title={project.title} website={project.website} />
+      </FadeInWhenVisible>
+
+      {/* Shorts & Posts */}
+      <FadeInWhenVisible delay={0.5}>
+        <SectionHeader title="Shorts and Posts" />
+        <ShortsAndPosts shorts={project.shorts ?? []} posts={project.posts ?? []} />
+      </FadeInWhenVisible>
+
+      {/* More Cases */}
+      <FadeInWhenVisible delay={0.5}>
+        <SectionHeader title="More Cases" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+          {recommendations.map((recProject) => (
+            <ProjectCard
+              key={recProject.id}
+              project={{
+                ...recProject,
+                year: recProject.year ?? "",
+                image: recProject.image ?? "",
+                tags: recProject.tags ?? [],
+                position: recProject.position ?? "up"
+              }}
+            />
+          ))}
+        </div>
+      </FadeInWhenVisible>
+
+      {/* Contact */}
+      <FadeInWhenVisible>
+        <Contact />
+      </FadeInWhenVisible>
+    </section>
+  );
+}

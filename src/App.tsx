@@ -8,8 +8,9 @@ import Services from "./pages/Services";
 import PlansAndPricing from "./pages/Plans";
 import Contact from "./pages/ContactUS";
 import ErrorPage from "./pages/Error";
-// import Portfolio from "./pages/Portfolio";
+import Portfolio from "./components/PortfolioWebsite";
 import WorkPortfolio from "./components/WorkDetails";
+import PortfolioPage from "./pages/Portfolio";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,7 +33,7 @@ export default function App() {
           <Route path="/services" element={<Services/>}/>
           <Route path="/pricing" element={<PlansAndPricing />} />
           <Route path="/contact" element={<Contact />}/>
-          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+          <Route path="/portfolio" element={<PortfolioPage />} />
            <Route path="/project/:id" element={<WorkPortfolio />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>

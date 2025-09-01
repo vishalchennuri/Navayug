@@ -11,7 +11,7 @@ export const Navbar = () => {
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "/about" },
     { label: "SERVICES", href: "/services" },
-    // { label: "PORTFOLIO", href: "/portfolio" },
+    { label: "PORTFOLIO", href: "/portfolio" },
   ];
 
   const handleLinkClick = () => {
