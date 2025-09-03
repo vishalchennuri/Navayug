@@ -1,4 +1,3 @@
-
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import portfolioData from "../data/portfoliopage.json"; 
@@ -76,7 +75,7 @@ const recommendations: Project[] = useMemo(
 
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-12">
+    <section className="px-6 md:px-10 lg:px-16 pt-26 py-12">
       {/* Breadcrumb */}
       <div className="text-sm text-gray-500 mb-6 flex items-center font-medium space-x-2 font-text leading-light text-gray-400">
         <Link to="/" className="hover">Home</Link>
@@ -110,15 +109,17 @@ const recommendations: Project[] = useMemo(
       {/* Video or Image */}
       <FadeInWhenVisible delay={0.5}>
         {project.video ? (
-          <div className="w-full h-56 md:h-72 lg:h-96 shadow-md bg-gray-50 mb-5">
-            <iframe
-              className="w-full h-full rounded-lg"
-              src={project.video}
-              title={project.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div className="w-full mb-5 flex justify-center">
+            <div className="relative w-full max-w-4xl" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full rounded-lg shadow-md"
+                src={project.video}
+                title={project.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         ) : (
           <img

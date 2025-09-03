@@ -36,13 +36,14 @@ const ShortsAndPosts: React.FC<ShortsAndPostsProps> = ({
 }) => {
   return (
     <div>
-      {/* Shorts Section */}
+      {/* Shorts Section - Mobile/Portrait Aspect Ratio (9:16) */}
       {shorts.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 mt-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12 mt-5">
           {shorts.map((short, index) => (
             <motion.div
               key={index}
-              className="relative w-full h-[22rem] md:h-[26rem] lg:h-[28rem] overflow-hidden shadow-md bg-gray-50 rounded-lg"
+              className="relative w-full overflow-hidden shadow-md bg-gray-50 rounded-lg"
+              style={{ aspectRatio: '9/16' }}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
@@ -51,7 +52,7 @@ const ShortsAndPosts: React.FC<ShortsAndPostsProps> = ({
             >
               {short.type === "video" && (
                 <iframe
-                  className="w-full h-full object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full rounded-lg"
                   src={`${short.src.replace("shorts", "embed")}?autoplay=1&mute=1`}
                   title={`Short ${index + 1}`}
                   frameBorder="0"
@@ -64,12 +65,14 @@ const ShortsAndPosts: React.FC<ShortsAndPostsProps> = ({
         </div>
       )}
 
+      {/* Posts Section - Square Aspect Ratio (1:1) - 2 per row on desktop */}
       {posts.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
           {posts.map((post, index) => (
             <motion.div
               key={index}
-              className="w-full h-[22rem] rounded-lg overflow-hidden shadow-md bg-gray-50"
+              className="relative w-full rounded-lg overflow-hidden shadow-md bg-gray-50"
+              style={{ aspectRatio: '1/1' }}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
@@ -80,7 +83,7 @@ const ShortsAndPosts: React.FC<ShortsAndPostsProps> = ({
                 <img
                   src={post.src}
                   alt={`Post ${index + 1}`}
-                  className="w-full h-full "
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               )}
             </motion.div>
