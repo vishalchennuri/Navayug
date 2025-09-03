@@ -2,7 +2,7 @@
   "projects": [
     {
   "id": 1,
-  "title": "Plant In",
+  "title": "Stallion Xtreme Fitness",
   "year": "2024",
   "image": "/w1.png",
   "tags": ["UX/UI", "App Development", "Design"],
@@ -52,7 +52,7 @@
 
     {
       "id": 2,
-      "title": "Esco",
+      "title": "Stallion Classic",
       "year": "2025",
       "image": "/w2.png",
       "tags": ["Branding", "Logo Design", "Marketing"],
@@ -62,7 +62,7 @@
   "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
       "services":["Website Design ,","App Design"],
        "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionxtremefitness.com/",
+      "website": "https://stallionclassic.com/",
       "position": "down",
       "shorts": [
     {
@@ -101,7 +101,7 @@
     },
     {
           "id": 3,
-      "title": "Hawke Ventures",
+      "title": "CowBoy",
       "year": "2024",
       "image": "/w3.png",
       "tags": ["Web Design", "Web Development", "UX/UI"],
@@ -109,9 +109,8 @@
       "heading":"Bridging traditional assets and intelligent finance",
         "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
   "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-         "services":["Website Design ,","App Design"],
+         "services":["Content Creation ,","Social Media Marketing"],
        "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionxtremefitness.com/",
       "position": "up" ,
       "shorts": [
     {

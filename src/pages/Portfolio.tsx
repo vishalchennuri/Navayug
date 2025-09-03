@@ -1,13 +1,8 @@
-import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import portfolioData from "../data/portfoliopage.json"; 
+import projectData from "../data/works.json"; // Using works.json as your data source
 import SectionHeader from "../ui/sectionHeader";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 import Contact from "../components/contact";
-import projectData from "../data/works.json";
-import ShortsAndPosts from "../components/portfolio-posts";
-import Portfolio from "../components/PortfolioWebsite";
-import { ProjectCard } from "../components/worksSection";
 
 interface Short {
   type: "video";
@@ -38,41 +33,96 @@ interface PortfolioProject {
   posts?: Post[];
 }
 
-interface Project {
-  id: number;
-  title: string;
-  year?: string;
-  image?: string;
-  tags?: string[];
-  client?: string;
-  heading?: string;
-  description1?: string;
-  description2?: string;
-  services?: string[];
-  video?: string;
-  website?: string;
-  position?: "up" | "down";
-  shorts?: Short[];
-  posts?: Post[];
-}
+const typedProjectData = projectData as { projects: PortfolioProject[] };
 
-const typedProjectData = projectData as { projects: Project[] };
-const typedPortfolioData = portfolioData as { portfolio: PortfolioProject[] };
+// Portfolio Card Component
+export const PortfolioCard = ({ project }: { project: PortfolioProject }) => {
+  const positionClass =
+    project.position === "up" ? "lg:-translate-y-8" : "lg:translate-y-8";
 
-function shuffleArray<T>(array: T[]): T[] {
-  return [...array].sort(() => Math.random() - 0.5);
-}
+  return (
+    <Link to={`/portfolio/${project.id}`}>
+      {/* Mobile Design */}
+      <div className="md:hidden mb-10">
+        <div className="relative w-full h-[280px] mb-4 rounded-lg overflow-hidden">
+          <img
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <h3 className="text-lg font-medium text-[var(--color-dark)] mb-2 tracking-tight">
+          <span className="font-[InstrumentSerifItalic] italic text-[var(--color-soft-gray)] mr-1">
+            the
+          </span>
+          {project.title}{" "}
+          <span className="text-orange-500 font-normal">
+            <span className="text-xs">&copy;</span>
+            {project.year}
+          </span>
+        </h3>
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-sm border border-gray-300 rounded-full text-gray-600"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
 
-export default function PortfolioPage() {
-  const project = typedPortfolioData.portfolio[0];
-const recommendations: Project[] = useMemo(
-  () =>
-    shuffleArray(
-      typedProjectData.projects.filter((p) => p.id !== Number(project.id))
-    ).slice(0, 2),
-  [project.id]
-);
+      {/* Desktop Design */}
+      <div
+        className={`hidden md:block transform transition-all duration-300 hover:scale-[1.02] mb-16 ${positionClass}`}
+      >
+        <div className="overflow-hidden transition-shadow duration-300 p-6 bg-white rounded-xl shadow-sm hover:shadow-md">
+          <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] mb-10">
+            <img
+              src="/rect.png"
+              alt="Background"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-[60%] h-auto"
+            />
+            <img
+              src={project.image || "/placeholder.svg"}
+              alt={project.title}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-[80%] h-auto object-contain z-10"
+            />
+          </div>
 
+          {/* Text content */}
+          <div className="relative z-20">
+            <h3 className="text-xl md:text-2xl font-light text-[var(--color-dark)] mb-4 tracking-wide">
+              <span className="font-[InstrumentSerifItalic] italic text-[var(--color-soft-gray)] mr-1">
+                the
+              </span>
+              {project.title}{" "}
+              <span className="text-orange-500 font-normal">
+                <span className="text-xs">&copy;</span>
+                {project.year}
+              </span>
+            </h3>
+
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-sm border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 transition"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default function PortfolioListingPage() {
+  const projects: PortfolioProject[] = typedProjectData.projects;
 
   return (
     <section className="px-6 md:px-10 lg:px-16 pt-26 py-12">
@@ -80,122 +130,29 @@ const recommendations: Project[] = useMemo(
       <div className="text-sm text-gray-500 mb-6 flex items-center font-medium space-x-2 font-text leading-light text-gray-400">
         <Link to="/" className="hover">Home</Link>
         <span>/</span>
-        <Link to="/portfolio" className="hover">Portfolio</Link>
-        <span>/</span>
         <span className="font-medium font-text text-[var(--color-gray)]">
-          {project.title}
+          Portfolio
         </span>
       </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-6 text-medium font-display text-[var(--color-dark)]">
-        {project.tags.map((tag, index) => (
-          <span key={index} className="px-3 py-1 text-sm border rounded-full">
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      {/* Title */}
-      <h1 className="text-4xl font-medium text-[var(--color-dark)] mb-5">
-        <span className="font-[InstrumentSerifItalic] italic text-[var(--color-soft-gray)] mr-1">
-          the
-        </span>
-        <span className="text-[var(--color-dark)] font-display font-text">
-          {project.title}
-        </span>
-      </h1>
-
-      {/* Video or Image */}
-      <FadeInWhenVisible delay={0.5}>
-        {project.video ? (
-          <div className="w-full mb-5 flex justify-center">
-            <div className="relative w-full max-w-4xl" style={{ aspectRatio: '16/9' }}>
-              <iframe
-                className="absolute inset-0 w-full h-full rounded-lg shadow-md"
-                src={project.video}
-                title={project.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        ) : (
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-56 md:h-72 lg:h-96 shadow-md bg-gray-50 mb-5"
-          />
-        )}
-      </FadeInWhenVisible>
-
-      {/* Overview */}
-      <FadeInWhenVisible delay={0.5}>
-        <SectionHeader title="OVERVIEW" />
-        <div className="w-full md:items-start md:space-x-8">
-          <h2 className="text-2xl font-text text-[var(--color-dark)] mb-4 md:w-1/2">
-            {project.heading}
+      {/* Header */}
+      <FadeInWhenVisible>
+        <div className="mb-12">
+          <SectionHeader title="PORTFOLIO" />
+          <h2 className="text-3xl lg:text-4xl font-display font-text text-[var(--color-dark)] mt-2 leading-tight tracking-tight">
+            Our Complete Portfolio
           </h2>
-
-          <p className="mb-5 text-display font-display text-[var(--color-soft-gray)] md:w-2/3 md:ml-[30%]">
-            {project.description1}
+          <p className="mt-2 text-base lg:text-xl font-text text-[var(--color-soft-gray)] tracking-tight leading-snug font-medium">
+            Explore all our projects and case studies.
           </p>
-
-          {project.description2 && (
-            <p className="mb-5 text-display font-display text-[var(--color-soft-gray)] md:w-2/3 md:ml-[30%]">
-              {project.description2}
-            </p>
-          )}
-
-          {project.client && (
-            <div className="mb-5 md:w-2/3 md:ml-[30%]">
-              <h3 className="font-text text-[var(--color-dark)] text-xl">Client</h3>
-              <p className="text-display font-display text-[var(--color-soft-gray)]">
-                {project.client}
-              </p>
-            </div>
-          )}
-
-          {project.services && (
-            <div className="mb-5 md:w-2/3 md:ml-[30%]">
-              <h3 className="font-text text-[var(--color-dark)] text-xl">Services</h3>
-              <div className="text-display font-display text-[var(--color-soft-gray)]">
-                {project.services.map((service, index) => (
-                  <span key={index} className="mr-2">{service}</span>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </FadeInWhenVisible>
 
-      {/* Portfolio Website */}
-      <FadeInWhenVisible delay={0.5}>
-        <Portfolio title={project.title} website={project.website} />
-      </FadeInWhenVisible>
-
-      {/* Shorts & Posts */}
-      <FadeInWhenVisible delay={0.5}>
-        <SectionHeader title="Shorts and Posts" />
-        <ShortsAndPosts shorts={project.shorts ?? []} posts={project.posts ?? []} />
-      </FadeInWhenVisible>
-
-      {/* More Cases */}
-      <FadeInWhenVisible delay={0.5}>
-        <SectionHeader title="More Cases" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-          {recommendations.map((recProject) => (
-            <ProjectCard
-              key={recProject.id}
-              project={{
-                ...recProject,
-                year: recProject.year ?? "",
-                image: recProject.image ?? "",
-                tags: recProject.tags ?? [],
-                position: recProject.position ?? "up"
-              }}
-            />
+      {/* Portfolio Grid */}
+      <FadeInWhenVisible delay={0.3}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {projects.map((project) => (
+            <PortfolioCard key={project.id} project={project} />
           ))}
         </div>
       </FadeInWhenVisible>

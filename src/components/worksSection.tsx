@@ -19,7 +19,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <>
-     <Link to={`/project/${project.id}`}>
+     <Link to={`/portfolio/${project.id}`}>
       <div className="md:hidden mb-10">
         <div className="relative w-full h-[280px] mb-4 rounded-lg overflow-hidden">
           <img
