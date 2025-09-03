@@ -36,7 +36,6 @@ export default function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/portfolio/:id" element={<IndividualPortfolioPage />} />
 
-           <Route path="/project/:id" element={<WorkPortfolio />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
