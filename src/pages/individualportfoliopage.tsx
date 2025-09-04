@@ -61,12 +61,31 @@ function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
+// Helper function to convert Google Drive links to embeddable format
+const getGoogleDriveEmbedUrl = (url: string): string | null => {
+  const match = url.match(/\/file\/d\/([a-zA-Z0-9-_]+)/);
+  if (match) {
+    return `https://drive.google.com/file/d/${match[1]}/preview`;
+  }
+  return null;
+};
+
+// Helper function to check if URL is a YouTube video
+const getYouTubeEmbedUrl = (url: string): string | null => {
+  const youtubeRegex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})/;
+  const match = url.match(youtubeRegex);
+  if (match) {
+    return `https://www.youtube.com/embed/${match[1]}`;
+  }
+  return null;
+};
+
 // Enhanced Progress Navigation Component
 const ProgressNavigation = ({ sections, activeSection }: { sections: string[], activeSection: string }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const yOffset = -100; // Adjust for any fixed headers
+      const yOffset = -100;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -74,10 +93,8 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
 
   return (
     <div className="fixed left-0 top-0 h-full w-20 lg:w-24 z-40 hidden md:block">
-      {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white shadow-lg border-r border-gray-200"></div>
       
-      {/* Navigation content */}
       <div className="relative h-full flex flex-col justify-center px-4 lg:px-6">
         <div className="flex flex-col space-y-6">
           {sections.map((section, index) => {
@@ -86,7 +103,6 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
             
             return (
               <div key={section} className="relative flex flex-col items-center group">
-                {/* Progress line above (except for first item) */}
                 {index > 0 && (
                   <div className={`absolute -top-6 left-1/2 -translate-x-1/2 w-0.5 h-6 transition-colors duration-300 ${
                     sections.slice(0, index).findIndex(s => s.toLowerCase() === activeSection) !== -1 || isCompleted
@@ -95,7 +111,6 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
                   }`} />
                 )}
                 
-                {/* Main navigation button */}
                 <button
                   onClick={() => scrollToSection(section.toLowerCase())}
                   className={`relative w-4 h-4 lg:w-5 lg:h-5 rounded-full border-2 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 ${
@@ -104,13 +119,11 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
                       : 'bg-white border-gray-300 hover:border-orange-400 hover:bg-orange-50'
                   }`}
                 >
-                  {/* Active indicator */}
                   {isActive && (
                     <div className="absolute inset-0.5 bg-white rounded-full animate-pulse"></div>
                   )}
                 </button>
                 
-                {/* Section label */}
                 <div className={`absolute left-8 lg:left-10 top-1/2 -translate-y-1/2 transition-all duration-200 ${
                   isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0'
                 }`}>
@@ -120,14 +133,12 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
                       : 'bg-white text-gray-700 border border-gray-200'
                   }`}>
                     {section}
-                    {/* Arrow pointing to button */}
                     <div className={`absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-transparent ${
                       isActive ? 'border-r-4 border-r-orange-500' : 'border-r-4 border-r-white'
                     }`}></div>
                   </div>
                 </div>
                 
-                {/* Progress number */}
                 <div className={`mt-2 text-xs font-bold transition-colors duration-300 ${
                   isActive ? 'text-orange-600' : 'text-gray-400'
                 }`}>
@@ -138,7 +149,6 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
           })}
         </div>
         
-        {/* Progress percentage at bottom */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <div className="text-center">
             <div className={`text-2xl font-bold transition-colors duration-300 ${
@@ -158,10 +168,8 @@ export default function IndividualPortfolioPage() {
   const { id } = useParams<{ id: string }>();
   const [activeSection, setActiveSection] = useState('overview');
   
-  // Find the project by ID from works.json
   const project = typedProjectData.projects.find(p => p.id === Number(id));
   
-  // If project not found, show error
   if (!project) {
     return (
       <section className="px-6 md:px-10 lg:px-16 pt-26 py-12">
@@ -183,7 +191,6 @@ export default function IndividualPortfolioPage() {
     );
   }
 
-  // Dynamically determine available sections based on project data
   const availableSections = useMemo(() => {
     const sections = ['OVERVIEW'];
     
@@ -202,12 +209,10 @@ export default function IndividualPortfolioPage() {
     [project.id]
   );
 
-  // Scroll spy functionality with improved detection
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 150; // Offset for better detection
+      const scrollPosition = window.scrollY + 150;
       
-      // Find the section that's currently in view
       let currentSection = availableSections[0].toLowerCase();
       
       for (let i = availableSections.length - 1; i >= 0; i--) {
@@ -222,7 +227,6 @@ export default function IndividualPortfolioPage() {
       setActiveSection(currentSection);
     };
 
-    // Throttle scroll events for better performance
     let ticking = false;
     const throttledHandleScroll = () => {
       if (!ticking) {
@@ -235,18 +239,21 @@ export default function IndividualPortfolioPage() {
     };
 
     window.addEventListener('scroll', throttledHandleScroll);
-    handleScroll(); // Set initial active section
+    handleScroll();
     
     return () => window.removeEventListener('scroll', throttledHandleScroll);
   }, [availableSections]);
 
+  // Get proper embed URL for video
+  const getEmbedUrl = (videoUrl: string): string | null => {
+    return getYouTubeEmbedUrl(videoUrl) || getEmbedUrl(videoUrl) || getGoogleDriveEmbedUrl(videoUrl);
+  };
+
   return (
     <>
-      {/* Enhanced Progress Navigation */}
       <ProgressNavigation sections={availableSections} activeSection={activeSection} />
       
       <section className="px-6 md:px-10 lg:px-16 md:pl-24 lg:pl-32 pt-26 py-12">
-        {/* Breadcrumb */}
         <div className="text-sm text-gray-500 mb-6 flex items-center font-medium space-x-2 font-text leading-light text-gray-400">
           <Link to="/" className="hover">Home</Link>
           <span>/</span>
@@ -257,7 +264,6 @@ export default function IndividualPortfolioPage() {
           </span>
         </div>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6 text-medium font-display text-[var(--color-dark)]">
           {project.tags.map((tag, index) => (
             <span key={index} className="px-3 py-1 text-sm border rounded-full">
@@ -266,7 +272,6 @@ export default function IndividualPortfolioPage() {
           ))}
         </div>
 
-        {/* Title */}
         <h1 className="text-4xl font-medium text-[var(--color-dark)] mb-5">
           <span className="font-[InstrumentSerifItalic] italic text-[var(--color-soft-gray)] mr-1">
             the
@@ -276,27 +281,57 @@ export default function IndividualPortfolioPage() {
           </span>
         </h1>
 
-        {/* Video or Image */}
+        {/* Enhanced Video/Image Section */}
         <FadeInWhenVisible delay={0.5}>
           {project.video ? (
-            <div className="w-full mb-5 flex justify-center">
-              <div className="relative w-full max-w-4xl" style={{ aspectRatio: '16/9' }}>
-                <iframe
-                  className="absolute inset-0 w-full h-full rounded-lg shadow-md"
-                  src={project.video}
-                  title={project.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
+            (() => {
+              const embedUrl = getEmbedUrl(project.video);
+              
+              if (embedUrl) {
+                return (
+                  <div className="w-full mb-5 flex justify-center">
+                    <div className="relative w-full max-w-4xl" style={{ aspectRatio: '16/9' }}>
+                      <iframe
+                        className="absolute inset-0 w-full h-full rounded-lg shadow-md"
+                        src={embedUrl}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                );
+              } else {
+                return (
+                  <div className="w-full mb-5 flex justify-center">
+                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center max-w-4xl w-full">
+                      <p className="text-gray-600 mb-4">Video cannot be embedded directly</p>
+                      <a 
+                        href={project.video} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
+                      >
+                        View Video
+                      </a>
+                    </div>
+                  </div>
+                );
+              }
+            })()
           ) : (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-56 md:h-72 lg:h-96 shadow-md bg-gray-50 mb-5"
-            />
+            <div className="w-full mb-5 flex justify-center">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="max-w-full h-auto rounded-lg shadow-md"
+                style={{
+                  maxHeight: '80vh', // Prevent extremely tall images
+                  objectFit: 'contain' // Maintain aspect ratio
+                }}
+              />
+            </div>
           )}
         </FadeInWhenVisible>
 
@@ -394,7 +429,6 @@ export default function IndividualPortfolioPage() {
           </div>
         </FadeInWhenVisible>
 
-        {/* Contact */}
         <FadeInWhenVisible>
           <Contact />
         </FadeInWhenVisible>

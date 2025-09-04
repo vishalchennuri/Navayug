@@ -2,28 +2,47 @@
   "projects": [
     {
   "id": 1,
-  "title": "Stallion Xtreme Fitness",
-  "year": "2024",
-  "image": "/w1.png",
-  "tags": ["UX/UI", "App Development", "Design"],
-  "client": "The Plant In United States",
-  "heading": "Bridging traditional assets and intelligent finance",
-  "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-  "services": ["Website Design ,", "App Design"],
-  "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-  "website": "https://stallionxtremefitness.com/",
-  "position": "up",
+"title": "Stallion Xtreme Fitness",
+"year": "2024",
+"image": "/w1.png",
+"tags": ["Web Development", "Branding & Digital Design", "Performance Marketing", "Content & Social Media", "Event Management"],
+"client": "Stallion Xtreme Fitness",
+"heading": "Empowering Fitness Through Digital Innovation",
+"description1": "Stallion Xtreme Fitness, a leading chain of gyms based in Hyderabad, partnered with us to build a strong digital presence and connect better with their fitness community. From designing a sleek and responsive website to creating impactful branding and digital design, we ensured their online identity matched the energy and strength of their physical spaces.",
+"description2": "Through performance marketing campaigns, engaging social media content, and event management support, we helped Stallion Xtreme Fitness grow its reach, attract new members, and strengthen brand loyalty. Our end-to-end solutions empowered the brand to position itself as not just a fitness destination, but a lifestyle movement in the Hyderabad fitness industry.",
+"services": ["Web Development", "Branding & Digital Design", "Performance Marketing", "Content & Social Media", "Event Management"],
+"video": "https://www.youtube.com/embed/-jPO-V0e5Cs?si=mUzdD3I-yw0wA-g7F",
+"website": "https://stallionxtremefitness.com/",
+"position": "up",
+
   "shorts": [
     {
       "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+      "src": "https://youtube.com/shorts/4F5yXNCf7qE?si=vynLFOpbBCQ7BiCJ",
+      "thumbnail": "https://youtube.com/shorts/4F5yXNCf7qE?si=vynLFOpbBCQ7BiCJ"
     },
+   
     {
       "type": "video",
        "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
       "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    },
+    {
+      "type": "video",
+       "src": "https://youtube.com/shorts/4k-fiwpIiZA?si=-je7Ml0a373Luv3x",
+      "thumbnail": "https://youtube.com/shorts/4k-fiwpIiZA?si=-je7Ml0a373Luv3x"
+    
+    },
+     {
+      "type": "video",
+       "src": "https://youtube.com/shorts/0U4NVFlzgX4?si=U8raZM2i9hc-mDRI",
+      "thumbnail": "https://youtube.com/shorts/0U4NVFlzgX4?si=U8raZM2i9hc-mDRI"
+    },
+     {
+      "type": "video",
+       "src": "https://youtube.com/shorts/lM2V5s7k4Iw?si=O9O1t6L1dkwxGfS6",
+      "thumbnail": "https://youtube.com/shorts/lM2V5s7k4Iw?si=O9O1t6L1dkwxGfS6"
     
     }
   ],
@@ -50,99 +69,93 @@
   ]
 },
 
+
     {
-      "id": 2,
-      "title": "Stallion Classic",
-      "year": "2025",
-      "image": "/w2.png",
-      "tags": ["Branding", "Logo Design", "Marketing"],
-      "client":"The Plant In United States",
-      "heading":"Bridging traditional assets and intelligent finance",
-        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-      "services":["Website Design ,","App Design"],
-       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionclassic.com/",
-      "position": "down",
+   "id": 2,
+"title": "Stallion Classic",
+"year": "2024",
+"image": "/w2.png",
+"tags": ["Web Development", "Branding & Digital Design", "Performance Marketing", "Content & Social Media", "Event Management"],
+"client": "Stallion Classic",
+"heading": "Building Hyderabad’s Premier Fitness Competition",
+"description1": "Stallion Classic is a flagship fitness competition designed to celebrate strength, discipline, and community. To establish the event as a recognized brand, we provided end-to-end support covering web development, branding, and digital design. Our efforts ensured the competition had a bold identity that reflected its scale and vision.",
+"description2": "From high-impact performance marketing campaigns to engaging social media storytelling and seamless event management, our team helped Stallion Classic attract participants, drive audience engagement, and position itself as one of Hyderabad’s premier fitness competitions. The result was a grand success, laying the foundation for a growing fitness movement.",
+"services": ["Web Development", "Branding & Digital Design", "Performance Marketing", "Content & Social Media", "Event Management"],
+"video": "https://www.youtube.com/embed/B5qSKp4cBik?si=fP5CwsI3jU_rJFvF",
+"website": "https://stallionclassic.com/",
+"position": "down"
+,
       "shorts": [
     {
       "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+      "src": "https://youtube.com/shorts/uKbXfjyK66Q?si=iDOcAWaEcgz-w0eo",
+      "thumbnail": "https://youtube.com/shorts/uKbXfjyK66Q?si=iDOcAWaEcgz-w0eo"
     },
     {
       "type": "video",
-       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+       "src": "https://youtube.com/shorts/5apDK8AIt1A?si=92fcsD4MqpVMTIw-",
+      "thumbnail": "https://youtube.com/shorts/5apDK8AIt1A?si=92fcsD4MqpVMTIw-"
     
+    },
+    {
+      "type": "video",
+      "src": "https://youtube.com/shorts/s50n5_orv5o?si=BWFCg4nAJuZ35VRK",
+      "thumbnail": "https://youtube.com/shorts/s50n5_orv5o?si=BWFCg4nAJuZ35VRK"
     }
   ],
 "posts": [
     {
       "type": "image",
-      "src": "/portfolio/stallionpic1.png"
-    },
-    {
-      "type": "image",
-      "src": "/portfolio/stallionpic2.png"
-
-    },
-    {
-      "type": "image",
-      "src": "/portfolio/stallionpic3.png"
-
+      "src": "/portfolio/stallionclassic/class1.jpg"
     },
     {
       "type": "image",
       "src": "/portfolio/stallionpic4.png"
 
     }
+   
   ]
     },
     {
           "id": 3,
       "title": "CowBoy",
-      "year": "2024",
-      "image": "/w3.png",
-      "tags": ["Web Design", "Web Development", "UX/UI"],
-      "client":"The Plant In United States",
-      "heading":"Bridging traditional assets and intelligent finance",
-        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-         "services":["Content Creation ,","Social Media Marketing"],
-       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+"year": "2025",
+"image": "/w3.png",
+"tags": ["Content Creation", "Social Media Marketing"],
+"client": "CowBoy",
+"heading": "Crafting a Digital Presence for Furniture & Interiors",
+"description1": "CowBoy, a modern furniture and interiors brand, partnered with us to strengthen their digital presence and showcase their unique designs to a wider audience. Through compelling content creation, we highlighted their craftsmanship, style, and functionality in ways that resonated with customers.",
+"description2": "With tailored social media marketing strategies, we helped CowBoy build brand awareness, engage with design-conscious audiences, and drive inquiries. By blending aesthetic storytelling with consistent digital management, we positioned CowBoy as a go-to name for premium furniture and interior solutions.",
+"services": ["Content Creation", "Social Media Marketing"]
+,
+       "video": "",
       "position": "up" ,
       "shorts": [
     {
       "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+      "src": "https://player.vimeo.com/video/1115891686?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "thumbnail": "https://player.vimeo.com/video/1115891686?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "type": "video",
-       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
-    
+       "src": "https://player.vimeo.com/video/1115892643?badge=0&amp",
+      "thumbnail": "https://player.vimeo.com/video/1115892643?badge=0&amp"
+    },
+    {
+      "type": "video",
+       "src": "https://player.vimeo.com/video/1115894356?badge=0&amp",
+      "thumbnail": "https://player.vimeo.com/video/1115894356?badge=0&amp"
     }
+    
   ],
   "posts": [
     {
       "type": "image",
-      "src": "/portfolio/stallionpic1.png"
+      "src": "/portfolio/cowboy/c1.jpg"
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic2.png"
-
-    },
-    {
-      "type": "image",
-      "src": "/portfolio/stallionpic3.png"
-
-    },
-    {
-      "type": "image",
-      "src": "/portfolio/stallionpic4.png"
+      "src": "/portfolio/cowboy/c2.jpg"
 
     }
   ]
@@ -150,150 +163,198 @@
 
     {
           "id": 4,
-      "title": "SSV Food Bowl",
-      "year": "2025",
-      "image": "/w4.png",
-      "tags": ["Brand Identity", "Logo Design", "Design"],
-      "client":"The Plant In United States",
-      "heading":"Bridging traditional assets and intelligent finance",
-        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-         "services":["Website Design ,","App Design"],
-       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionxtremefitness.com/",
+     "title": "SSV HealthBowl",
+"year": "2025",
+"image": "/w4.png",
+"tags": ["Content Creation", "Social Media Marketing"],
+"client": "SSV HealthBowl",
+"heading": "Promoting Healthy Living Through Digital Storytelling",
+"description1": "SSV HealthBowl, a Hyderabad-based startup delivering nutritious and delicious health bowls, partnered with us to grow their online presence and build trust with health-conscious customers. Through creative content creation, we showcased their commitment to fresh ingredients, balanced meals, and wellness-focused living.",
+"description2": "With impactful social media marketing strategies, we helped SSV HealthBowl engage their community, attract new customers, and position themselves as a reliable healthy food brand in the city. By blending vibrant visuals with authentic storytelling, we supported their journey of making healthy eating both accessible and exciting.",
+"services": ["Content Creation", "Social Media Marketing"]
+
+,
       "position": "down" ,
       "shorts": [
     {
       "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+      "src": "https://player.vimeo.com/video/1115898495?badge=0&amp;autopause=0&amp;player_id=0&amp",
+      "thumbnail": "https://player.vimeo.com/video/1115898495?badge=0&amp;autopause=0&amp;player_id=0&amp"
     },
     {
       "type": "video",
-       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
-    
+      "src": "https://player.vimeo.com/video/1115899360?badge=0&amp;autopause=0&amp",
+      "thumbnail": "https://player.vimeo.com/video/1115899360?badge=0&amp;autopause=0&amp"
+    },
+    {
+      "type": "video",
+       "src": "https://player.vimeo.com/video/1115899633?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "thumbnail": "https://player.vimeo.com/video/1115899633?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
+    
   ],
 "posts": [
     {
       "type": "image",
-      "src": "/portfolio/stallionpic1.png"
+      "src": "/portfolio/ssv/s1.jpg"
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic2.png"
+      "src": "/portfolio/ssv/s2.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic3.png"
+      "src": "/portfolio/ssv/s3.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic4.png"
+      "src": "/portfolio/ssv/s4.jpg"
 
     }
   ]
     },
      {
-          "id": 4,
-      "title": "Truway",
-      "year": "2025",
-      "image": "/w4.png",
-      "tags": ["Brand Identity", "Logo Design", "Design"],
-      "client":"The Plant In United States",
-      "heading":"Bridging traditional assets and intelligent finance",
-        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-         "services":["Website Design ,","App Design"],
-       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionxtremefitness.com/",
-      "position": "down" ,
+         "id": 5,
+"title": "WallSkin",
+"year": "2025",
+"image": "/w4.png",
+"tags": ["Content Creation", "Social Media Marketing"],
+"client": "WallSkin",
+"heading": "Designing a Digital Identity for Premium Interiors",
+"description1": "WallSkin, a Hyderabad-based interiors brand specializing in premium wallpapers, blinds, and decor solutions, partnered with us to enhance their digital presence. Through engaging content creation, we highlighted their craftsmanship, variety, and modern aesthetic appeal to attract design-conscious customers.",
+"description2": "With strategic social media marketing, we helped WallSkin build brand awareness, connect with homeowners and businesses, and showcase their products as a blend of luxury and functionality. Our efforts positioned them as a go-to choice for premium interiors in Hyderabad’s growing lifestyle market.",
+"services": ["Content Creation", "Social Media Marketing"]
+,
+      "position": "up" ,
       "shorts": [
     {
       "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+      "src": "https://player.vimeo.com/video/1115902621?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "thumbnail": "https://player.vimeo.com/video/1115902621?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "type": "video",
-       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+       "src": "https://player.vimeo.com/video/1115903060?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "thumbnail": "https://player.vimeo.com/video/1115903060?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     
     }
-  ],
-"posts": [
+  ]
+
+    },
+    {
+          "id": 6,
+"title": "Seawoods Hospital",
+"year": "2025",
+"image": "/w3.png",
+"tags": ["Content Creation", "Social Media Marketing", "Branding & Digital Design"],
+"client": "Seawoods Hospital",
+"heading": "Shaping the Digital Identity of a Premium Healthcare Brand",
+"description1": "Seawoods Hospital, a premium healthcare institution, partnered with us to build a strong and trustworthy digital presence. Through creative content creation, we highlighted their state-of-the-art facilities, expert medical staff, and patient-first approach to healthcare.",
+"description2": "By combining social media marketing with impactful branding and digital design, we helped Seawoods Hospital engage with patients online, reinforce their reputation, and position themselves as a leading name in premium healthcare services.",
+"services": ["Content Creation", "Social Media Marketing", "Branding & Digital Design"]
+
+,
+      "position": "down" ,
+      
+  "posts": [
     {
       "type": "image",
-      "src": "/portfolio/stallionpic1.png"
+      "src": "/portfolio/seawoods/s1.jpg"
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic2.png"
+      "src": "/portfolio/seawoods/s2.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic3.png"
+      "src": "/portfolio/seawoods/s3.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic4.png"
+      "src": "/portfolio/seawoods/s4.jpg"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/seawoods/s5.jpg"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/seawoods/s6.jpg"
 
     }
   ]
     },
      {
-          "id": 4,
-      "title": "Truway",
-      "year": "2025",
-      "image": "/w4.png",
-      "tags": ["Brand Identity", "Logo Design", "Design"],
-      "client":"The Plant In United States",
-      "heading":"Bridging traditional assets and intelligent finance",
-        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
-  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
-         "services":["Website Design ,","App Design"],
-       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
-      "website": "https://stallionxtremefitness.com/",
+          "id": 7,
+"title": "Work Wilds",
+"year": "2025",
+"image": "/w3.png",
+"tags": ["Content Creation", "Social Media Marketing", "Branding & Digital Design"],
+"client": "Work Wilds",
+"heading": "Building the Digital Identity of a Modern Coworking Space",
+"description1": "Work Wilds, a vibrant coworking space in Hyderabad, partnered with us to craft a strong digital identity and attract professionals, startups, and freelancers. Through creative content creation and branding, we highlighted the workspace’s modern design, collaborative environment, and productivity-focused amenities.",
+"description2": "With strategic social media marketing and digital design support, we helped Work Wilds connect with its target audience, drive membership inquiries, and position itself as a go-to coworking destination in Hyderabad’s growing startup and business ecosystem.",
+"services": ["Content Creation", "Social Media Marketing", "Branding & Digital Design"]
+
+,
       "position": "down" ,
-      "shorts": [
-    {
-      "type": "video",
-      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
-    },
-    {
-      "type": "video",
-       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
-      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
-    
-    }
-  ],
-"posts": [
+      
+  "posts": [
     {
       "type": "image",
-      "src": "/portfolio/stallionpic1.png"
+      "src": "/portfolio/work/w1.jpg"
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic2.png"
+      "src": "/portfolio/work/w2.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic3.png"
+      "src": "/portfolio/work/w3.jpg"
 
     },
     {
       "type": "image",
-      "src": "/portfolio/stallionpic4.png"
+      "src": "/portfolio/work/w4.jpg"
 
     }
   ]
     }
+    , {
+          "id": 8,
+"title": "Aurora Moments",
+"year": "2025",
+"image": "/w3.png",
+"tags": ["Content Creation", "Social Media Marketing"],
+"client": "Aurora Moments",
+"heading": "Framing Memories with a Strong Digital Presence",
+"description1": "Aurora Moments, a photography and media brand, partnered with us to showcase their artistry and storytelling through a refined digital presence. By creating compelling content, we highlighted their expertise in capturing timeless moments and turning them into lasting visual experiences.",
+"description2": "Through impactful social media marketing, we helped Aurora Moments expand their reach, connect with new audiences, and position themselves as a trusted name in photography and media. Our strategies blended creativity with visibility, ensuring their work gained the recognition it deserves.",
+"services": ["Content Creation", "Social Media Marketing"]
+
+,
+      "position": "down" ,
+      
+  "posts": [
+    {
+      "type": "image",
+      "src": "/portfolio/aurora/a1.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/aurora/a2.jpg"
+
+    }
+   
+  ]
+    }
+
   ]
 }

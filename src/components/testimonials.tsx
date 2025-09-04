@@ -7,20 +7,19 @@ interface Testimonial {
   id: string
   name: string
   title: string
-  avatar: string
   content: string
 }
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="flex-shrink-0 w-72 sm:w-80 bg-gray-50 p-6 mx-2 hover:bg-gray-100 transition-colors duration-300 rounded-md">
-      <div className="flex justify-start mb-4">
+      {/* <div className="flex justify-start mb-4">
         <img
           src={testimonial.avatar || "/placeholder.svg"}
           alt={testimonial.name}
           className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
         />
-      </div>
+      </div> */}
 
       <div className="flex justify-start mb-4">
         <svg

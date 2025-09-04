@@ -2,31 +2,51 @@
   "testimonials": [
     {
       "id": "1",
-      "name": "Rahul M.",
-      "title": "Founder",
-      "avatar": "/placeholder.svg?height=60&width=60",
-      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+      "name": "Stallion Xtreme Fitness",
+      "title": "Founders – Abhilash & Suresh Goyal",
+      "content": "NAVAYUG transformed our gym chain’s digital presence with a sleek website, strong branding, and engaging social media campaigns. Their event management and marketing support helped us scale our community and establish Stallion Xtreme Fitness as a lifestyle brand in Hyderabad."
     },
     {
       "id": "2",
-      "name": "Priya S.",
-      "title": "CEO",
-      "avatar": "/placeholder.svg?height=60&width=60",
-      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+      "name": "Stallion Classic",
+      "title": "Event Organizing Team",
+      "content": "With NAVAYUG’s web development, branding, and performance marketing, Stallion Classic became a grand success. Their digital strategies and event support helped us attract participants, build an engaged audience, and establish our competition as Hyderabad’s premier fitness event."
     },
     {
       "id": "3",
-      "name": "Amit K.",
-      "title": "Marketing Director",
-      "avatar": "/placeholder.svg?height=60&width=60",
-      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+      "name": "CowBoy",
+      "title": "Management Team",
+      "content": "NAVAYUG’s content creation and social media management helped us showcase our premium furniture and interiors in a new light. Their digital storytelling connected us with design-conscious audiences and drove meaningful engagement with our brand."
     },
     {
       "id": "4",
-      "name": "Sarah L.",
+      "name": "SSV HealthBowl",
       "title": "Founder",
-      "avatar": "/placeholder.svg?height=60&width=60",
-      "content": "NAVYUG's Performance Ads Tripled Our ROAS In 90 Days. Their Data-Driven Approach Eliminated Guesswork—We Scaled From ₹5L To ₹20L/Month With Their Team"
+      "content": "As a healthy food bowl startup, we needed a strong digital push. NAVAYUG created vibrant content and managed our social media to highlight our focus on health and freshness. Their work helped us build trust and reach more health-conscious customers in Hyderabad."
+    },
+    {
+      "id": "5",
+      "name": "WallSkin",
+      "title": "Founder",
+      "content": "NAVAYUG helped WallSkin grow by showcasing our premium wallpapers and blinds with creative content and effective social media campaigns. Their efforts positioned us as a top choice for interiors in Hyderabad."
+    },
+    {
+      "id": "6",
+      "name": "Seawoods Hospital",
+      "title": "Hospital Administration",
+      "content": "NAVAYUG created compelling content and branding for our premium hospital. Their social media and digital design support helped us strengthen our reputation and connect with patients in a more trustworthy, modern way."
+    },
+    {
+      "id": "7",
+      "name": "Work Wilds",
+      "title": "Founder",
+      "content": "As a coworking space in Hyderabad, we wanted to attract startups and freelancers. NAVAYUG’s branding, content creation, and marketing strategies built awareness and positioned Work Wilds as a vibrant workspace for professionals."
+    },
+    {
+      "id": "8",
+      "name": "Aurora Moments",
+      "title": "Photography & Media Team",
+      "content": "NAVAYUG helped us craft a digital identity through creative storytelling and consistent social media management. Their strategies gave our photography brand the recognition and audience growth we were aiming for."
     }
   ]
 }
