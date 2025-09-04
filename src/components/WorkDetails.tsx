@@ -6,7 +6,7 @@ import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 import { ProjectCard } from "./worksSection";
 import Contact from "../components/contact";
 import ShortsAndPosts, { type Short, type Post } from "./portfolio-posts";
-
+// yo
 export interface Project {
   id: number;
   title: string;
