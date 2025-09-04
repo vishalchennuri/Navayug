@@ -157,7 +157,6 @@ const ProgressNavigation = ({ sections, activeSection }: { sections: string[], a
 export default function IndividualPortfolioPage() {
   const { id } = useParams<{ id: string }>();
   const [activeSection, setActiveSection] = useState('overview');
-  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
   
   // Find the project by ID from works.json
   const project = typedProjectData.projects.find(p => p.id === Number(id));

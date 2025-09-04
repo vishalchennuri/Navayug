@@ -8,7 +8,6 @@ import Services from "./pages/Services";
 import PlansAndPricing from "./pages/Plans";
 import Contact from "./pages/ContactUS";
 import ErrorPage from "./pages/Error";
-import WorkPortfolio from "./components/WorkDetails";
 import PortfolioPage from "./pages/Portfolio";
 import IndividualPortfolioPage from "./pages/individualportfoliopage";
 
