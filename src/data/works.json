@@ -146,7 +146,107 @@
 
     }
   ]
-    },{
+    },
+
+    {
+          "id": 4,
+      "title": "SSV Food Bowl",
+      "year": "2025",
+      "image": "/w4.png",
+      "tags": ["Brand Identity", "Logo Design", "Design"],
+      "client":"The Plant In United States",
+      "heading":"Bridging traditional assets and intelligent finance",
+        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+         "services":["Website Design ,","App Design"],
+       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+      "website": "https://stallionxtremefitness.com/",
+      "position": "down" ,
+      "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+"posts": [
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic1.png"
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic2.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic3.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic4.png"
+
+    }
+  ]
+    },
+     {
+          "id": 4,
+      "title": "Truway",
+      "year": "2025",
+      "image": "/w4.png",
+      "tags": ["Brand Identity", "Logo Design", "Design"],
+      "client":"The Plant In United States",
+      "heading":"Bridging traditional assets and intelligent finance",
+        "description1": "The Plant In is an innovative platform designed to empower users with the tools and knowledge necessary to harness the potential of Real-World Assets (RWA) and AI technologies. Its comprehensive suite includes a Learning Hub, seamless data integration, advanced model-building tools, and dynamic visualization features, enabling to transformation users' ideas into reality.",
+  "description2": "By unlocking the power of blockchain technology, Value Chain facilitates the conversion of real-world assets into tokenized formats, promoting fractional ownership, increased liquidity, and transparent transactions across various industries. Key use cases include real estate, luxury goods, and bonds, ensuring businesses can explore diverse investment opportunities",
+         "services":["Website Design ,","App Design"],
+       "video": "https://www.youtube.com/embed/o8NiE3XMPrM?start=1169",
+      "website": "https://stallionxtremefitness.com/",
+      "position": "down" ,
+      "shorts": [
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    },
+    {
+      "type": "video",
+       "src": "https://www.youtube.com/shorts/ynAjIhOFYsY",
+      "thumbnail": "https://www.youtube.com/shorts/ynAjIhOFYsY"
+    
+    }
+  ],
+"posts": [
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic1.png"
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic2.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic3.png"
+
+    },
+    {
+      "type": "image",
+      "src": "/portfolio/stallionpic4.png"
+
+    }
+  ]
+    },
+     {
           "id": 4,
       "title": "Truway",
       "year": "2025",

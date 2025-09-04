@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import projectData from "../data/works.json";
 import ConnectButton from "../ui/connectButton";
@@ -99,10 +98,12 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 };
 
 export default function Component() {
-  const projects: Project[] = projectData.projects.map((project: any) => ({
-    ...project,
-    position: project.position === "up" ? "up" : "down",
-  }));
+  const projects: Project[] = projectData.projects
+    .map((project: any) => ({
+      ...project,
+      position: project.position === "up" ? "up" : "down",
+    }))
+    .slice(0, 4); // Limit to first 4 projects only
 
   return (
     <section className="px-6 md:px-10 lg:px-16 py-20">

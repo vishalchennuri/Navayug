@@ -116,6 +116,32 @@ export const Navbar = () => {
             isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
           }`}
         >
+          {/* Close Button - Top Right */}
+          <button
+            onClick={handleLinkClick}
+            className={`absolute top-8 right-8 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-[var(--color-dark)] hover:text-orange-500 hover:bg-orange-500/10 transition-all duration-300 touch-manipulation shadow-lg ${
+              isOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+            }`}
+            style={{
+              transitionDelay: isOpen ? "200ms" : "0ms",
+            }}
+            aria-label="Close Menu"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
           {/* Menu Items */}
           <div className="flex flex-col items-center space-y-8">
             {navLinks.map(({ label, href }, idx) => (
@@ -131,7 +157,7 @@ export const Navbar = () => {
                   isOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
                 }`}
                 style={{
-                  transitionDelay: isOpen ? `${idx * 100}ms` : "0ms",
+                  transitionDelay: isOpen ? `${(idx + 1) * 100}ms` : "0ms",
                 }}
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:tracking-[0.2em] block py-2 px-4">
@@ -153,13 +179,15 @@ export const Navbar = () => {
                 isOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
               }`}
               style={{
-                transitionDelay: isOpen ? `${navLinks.length * 100}ms` : "0ms",
+                transitionDelay: isOpen ? `${(navLinks.length + 1) * 100}ms` : "0ms",
               }}
               onClick={handleLinkClick}
             >
               <ConnectButton label="CONTACT US" to="contact" />
             </div>
           </div>
+
+        
 
           {/* Decorative Elements */}
           <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-xl animate-pulse pointer-events-none"></div>

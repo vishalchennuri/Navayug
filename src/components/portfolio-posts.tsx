@@ -34,16 +34,26 @@ const ShortsAndPosts: React.FC<ShortsAndPostsProps> = ({
   shorts = [],
   posts = [],
 }) => {
+  // Determine if we should center the shorts based on count
+  const shouldCenterShorts = shorts.length <= 3;
+
   return (
     <div>
       {/* Shorts Section - Mobile/Portrait Aspect Ratio (9:16) */}
       {shorts.length > 0 && (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12 mt-5">
+        <div 
+          className={`gap-4 mb-12 mt-5 ${
+            shouldCenterShorts 
+              ? `grid justify-center mx-auto max-w-4xl`
+              : 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'
+          }`}
+          style={shouldCenterShorts ? { gridTemplateColumns: `repeat(${Math.min(shorts.length, 3)}, minmax(0, 1fr))` } : {}}
+        >
           {shorts.map((short, index) => (
             <motion.div
               key={index}
               className="relative w-full overflow-hidden shadow-md bg-gray-50 rounded-lg"
-              style={{ aspectRatio: '9/16' }}
+              style={{ aspectRatio: '4/6' }}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
