@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState, useRef } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import projectData from "../data/works.json";
 import SectionHeader from "../ui/sectionHeader";
