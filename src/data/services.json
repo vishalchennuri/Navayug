@@ -16,12 +16,14 @@
     "title": "Web & App Development",
     "description": "Sites and apps engineered for speed, security, and scalability",
     "points": [
-      "Landing pages (via Webflow/Wix)",
-      "Full websites (Wix, Webflow, WordPress)",
-      "E-commerce or portfolio sites",
-      "Basic app development based on budget.",
+      "Landing pages and microsites (Via React, Next.js ,etc.)",
+      "Full websites (React, Next.js ,etc.)",
+      "No code websites (Wix, Squarespace, WordPress)",
+      "E-commerce And portfolio sites",
+      "App development based on budget.",
       "Google Maps + SEO setup",
       "UI/UX Designing"
+      
     ],
     "image": "/Services/web.png"
   },
